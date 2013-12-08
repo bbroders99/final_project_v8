@@ -41,11 +41,52 @@
 
 </dl>
 
+
+<!-- Rate artist -->
+
+
+<% if buyer_signed_in? && @idea.status == "Done" %>
+  <div class="page-header">
+    <h3>Rate artist</h3>
+  </div>  
+  <div>
+    <p>Please rate your artist with 5 being the best</p>
+  </div>
+  
+  <%= form_tag(idea_url(@idea), method: 'patch', class: 'form-horizontal') do %>
+
+    <%= hidden_field_tag :post_date, @idea.post_date, class: 'form-control' %>
+    <%= hidden_field_tag :title, @idea.title, class: 'form-control' %>
+    <%= hidden_field_tag :description, @idea.description, class: 'form-control' %>
+    <%= hidden_field_tag :price, @idea.price, class: 'form-control' %>
+    <%= hidden_field_tag :category, @idea.category, class: 'form-control' %>
+    <%= hidden_field_tag :size, @idea.size, class: 'form-control' %>
+    <%= hidden_field_tag :status, @idea.status, class: 'form-control' %>
+    <%= hidden_field_tag :artist_id, @idea.artist_id, class: 'form-control' %>
+    
+    <div class="form-group">
+      <%= label_tag :rating, "Rating", class: 'col-md-1 control-label' %>
+      <div class="col-md-offset-0 col-md-1">
+        <%= select_tag :rating, options_for_select([ nil, 1,2,3,4,5 ], @idea.rating ), class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-offset-1 col-md-6">
+        <%= submit_tag "Rate Artist", class: 'btn btn-default' %>
+      </div>
+    </div>
+
+  <% end %>
+
+<% end %>
+
+
 <!-- New Bid Form -->
 
 <% if artist_signed_in? %>
   <div class="page-header">
-    <h1>New Bid</h1>
+    <h3>New Bid</h3>
   </div>
 
   <%= form_tag(bids_url, method: 'post', class: 'form-horizontal') do %>
@@ -65,7 +106,7 @@
 
 <% if artist_signed_in? == false %>
   <div class="page-header">
-    <h1>Current bids</h1>
+    <h3>Current bids</h3>
   </div>
 
 <table class="table table-hover">
@@ -98,7 +139,7 @@
             <%= hidden_field_tag :category, @idea.category, class: 'form-control' %>
             <%= hidden_field_tag :size, @idea.size, class: 'form-control' %>
             <%= hidden_field_tag :status, "Done", class: 'form-control' %>
-            <%= hidden_field_tag :rating, @idea.rating, class: 'form-control' %>
+            <%= hidden_field_tag :rating, nil, class: 'form-control' %>
             <%= hidden_field_tag :artist_id, bid.artist_id, class: 'form-control' %>
 
             <div class="form-group">
