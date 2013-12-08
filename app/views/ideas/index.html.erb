@@ -34,7 +34,7 @@
         <!-- <td><%= idea.description %></td> -->
         <td><%= idea.category %></td>
         <td><%= idea.size %></td>
-        <td>$<%= idea.price %></td>
+        <td>$<%= idea.price.round(0) %></td>
         <td><%= idea.bids.count %></td>
         <td>
           <% if idea.artist_id != nil %>
