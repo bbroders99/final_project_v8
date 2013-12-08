@@ -16,4 +16,11 @@ class Artist < ActiveRecord::Base
     	return first_name + " " + last_name
 	end
 
+	def average_rating
+		
+		
+
+		return 3
+	end
+
 end

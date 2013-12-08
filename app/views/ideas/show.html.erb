@@ -116,7 +116,7 @@
       <th>Artist</th>
       <th>Show Artist Profile</th>
       <th>Select Artist</th>
-      <th>Rating</th>
+      <th>Average Rating</th>
     </tr>
   </thead>
 
@@ -150,8 +150,27 @@
           <% end %>
 
         </td>
-        <td></td>
+        
+        <td> <!-- average artist rating calculation -->
+          <% a = bid.artist_id %>
+           <% b = Idea.where(:artist_id => a) %>
+           <% c = 0.0 %>
+           <% b.each do |b| %>
+            <% if b.rating != nil %>
+              <% c = b.rating + c %>
+            <% end %>
+          <% end %>
+          <% d = (c/b.count).round(1) %>
+          <% if d >= 0 %>
+            <%= d %>
+          <% else %>
+            <%= "-" %>
+          <% end %>
+   
+        </td>
       </tr>
+
+
 
     <% end %>
   </tbody>
