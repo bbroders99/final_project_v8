@@ -4,9 +4,9 @@
 
 <%= form_tag(portfolio_image_url(@portfolio_image), method: 'patch', class: 'form-horizontal') do %>
   <div class="form-group">
-    <%= label_tag :url, nil, class: 'col-md-2 control-label' %>
+    <%= label_tag image, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= text_field_tag :url, @portfolio_image.url, class: 'form-control' %>
+      <%= text_field_tag :image, @portfolio_image.image, class: 'form-control' %>
     </div>
   </div>
 

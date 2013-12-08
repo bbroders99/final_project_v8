@@ -13,7 +13,7 @@ class PortfolioImagesController < ApplicationController
 
   def create
     @portfolio_image = PortfolioImage.new
-    @portfolio_image.url = params[:url]
+    @portfolio_image.image = params[:image]
     @portfolio_image.artist_id = params[:artist_id]
 
     if @portfolio_image.save
@@ -29,7 +29,7 @@ class PortfolioImagesController < ApplicationController
 
   def update
     @portfolio_image = PortfolioImage.find_by(id: params[:id])
-    @portfolio_image.url = params[:url]
+    @portfolio_image.image = params[:image]
     @portfolio_image.artist_id = params[:artist_id]
 
     if @portfolio_image.save
