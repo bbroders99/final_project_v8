@@ -18,7 +18,7 @@
   <tbody>
     <% @portfolio_images.each do |portfolio_image| %>
       <tr>
-        <td><%= portfolio_image.image %></td>
+        <td><%= image_tag portfolio_image.image, :width => 100 %></td>
         <td><%= portfolio_image.artist_id %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, portfolio_image_url(portfolio_image), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_portfolio_image_url(portfolio_image), class: 'btn btn-warning' %></td>
@@ -27,4 +27,3 @@
     <% end %>
   </tbody>
 </table>
-
