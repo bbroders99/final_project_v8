@@ -2,11 +2,11 @@
   <h1>Editing Portfolio Image #<%= @portfolio_image.id %></h1>
 </div>
 
-<%= form_tag(portfolio_image_url(@portfolio_image), method: 'patch', class: 'form-horizontal') do %>
+<%= form_tag(portfolio_image_url(@portfolio_image), method: 'patch', class: 'form-horizontal', multipart: true) do %>
   <div class="form-group">
     <%= label_tag image, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= text_field_tag :image, @portfolio_image.image, class: 'form-control' %>
+      <%= file_field_tag :image %>
     </div>
   </div>
 

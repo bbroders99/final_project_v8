@@ -2,11 +2,11 @@
   <h1>New Portfolio Image</h1>
 </div>
 
-<%= form_tag(portfolio_images_url, method: 'post', class: 'form-horizontal') do %>
+<%= form_tag(portfolio_images_url, method: 'post', class: 'form-horizontal', multipart: true) do %>
   <div class="form-group">
-    <%= label_tag :images, nil, class: 'col-md-2 control-label' %>
+    <%= label_tag :image, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= text_field_tag :images, nil, class: 'form-control' %>
+      <%= file_field_tag :image %>
     </div>
   </div>
 
