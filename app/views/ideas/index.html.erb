@@ -35,7 +35,7 @@
         <td><%= idea.category %></td>
         <td><%= idea.size %></td>
         <td>$<%= idea.price %></td>
-        <td><%= %></td> <!-- need to add bid count -->
+        <td><%= idea.bids.count %></td>
         <td>
           <% if idea.artist_id != nil %>
             <%= idea.artist.full_name %>
