@@ -30,7 +30,7 @@ class BidsController < ApplicationController
   def update
     @bid = Bid.find_by(id: params[:id])
     @bid.idea_id = params[:idea_id]
-    @bid.artist_id = params[:artist_id]
+    @bid.artist_id = current_artist.id
 
     if @bid.save
       redirect_to bids_url, notice: "Bid updated successfully."

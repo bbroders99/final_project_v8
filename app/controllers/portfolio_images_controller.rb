@@ -14,7 +14,7 @@ class PortfolioImagesController < ApplicationController
   def create
     @portfolio_image = PortfolioImage.new
     @portfolio_image.image = params[:image]
-    @portfolio_image.artist_id = params[:artist_id]
+    @portfolio_image.artist_id = current_artist.id
 
     if @portfolio_image.save
       redirect_to portfolio_images_url, notice: "Portfolio image created successfully."
@@ -30,7 +30,7 @@ class PortfolioImagesController < ApplicationController
   def update
     @portfolio_image = PortfolioImage.find_by(id: params[:id])
     @portfolio_image.image = params[:image]
-    @portfolio_image.artist_id = params[:artist_id]
+    @portfolio_image.artist_id = current_artist.id
 
     if @portfolio_image.save
       redirect_to portfolio_images_url, notice: "Portfolio image updated successfully."

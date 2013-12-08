@@ -22,17 +22,29 @@
 	   <% a = @artist.id %>
 	   <% b = Idea.where(:artist_id => a) %>
 	   <% c = 0.0 %>
+	   
 	   <% b.each do |b| %>
 	    <% if b.rating != nil %>
 	      <% c = b.rating + c %>
 	    <% end %>
 	  <% end %>
+	  
 	  <% d = (c/b.count).round(1) %>
 	  <% if d >= 0 %>
 	    <%= d %>
 	  <% else %>
 	    <%= "-" %>
 	  <% end %>
+  </dd>
+
+  <dt>Portfolio</dt>
+  <dd>
+	   <% a = @artist.id %>
+	   <% b = PortfolioImage.where(:artist_id => a) %>
+	   
+	   <% b.each do |b| %>
+       	<%= image_tag b.image, :width => 200 %>
+	   <% end %>
   </dd>
 
 </dl>
