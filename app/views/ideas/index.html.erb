@@ -36,7 +36,11 @@
         <td><%= idea.size %></td>
         <td>$<%= idea.price %></td>
         <td><%= %></td> <!-- need to add bid count -->
-        <td><%= idea.artist.first_name %> <%= idea.artist.last_name %></td>
+        <td>
+          <% if idea.artist_id != nil %>
+            <%= idea.artist.full_name %>
+          <% end %>
+        </td>
         <td><%= idea.status %></td>
         <!-- <td><%= idea.rating %></td> -->
         <!-- <% if buyer_signed_in? == false && artist_signed_in? == false %> -->

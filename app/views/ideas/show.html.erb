@@ -31,7 +31,11 @@
   <dd><%= @idea.buyer.full_name %></dd>
 
   <dt>Artist</dt>
-  <dd><%= @idea.artist.first_name %> <%= @idea.artist.last_name %></dd>
+  <dd>
+    <% if @idea.artist_id != nil %>
+      <%= @idea.artist.first_name %> <%= @idea.artist.last_name %>
+    <% end %>
+  </dd>
 
 </dl>
 
@@ -68,9 +72,8 @@
       <th>Idea</th>
       <th>Artist</th>
       <th>Show Artist Profile</th>
+      <th>Select Artist</th>
       <th>Rating</th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -82,6 +85,28 @@
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, artist_url(bid.artist), class: 'btn btn-primary' %></td>
         <!--<td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_bid_url(bid), class: 'btn btn-warning' %></td> -->
         <!-- <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, bid_url(bid), method: 'delete', data: { confirm: "Do you really want to delete this bid?" }, class: 'btn btn-danger' %></td> -->
+        <td>
+
+          <%= form_tag(idea_url(@idea), method: 'patch', class: 'form-horizontal') do %>
+
+            <%= hidden_field_tag :post_date, @idea.post_date, class: 'form-control' %>
+            <%= hidden_field_tag :title, @idea.title, class: 'form-control' %>
+            <%= hidden_field_tag :description, @idea.description, class: 'form-control' %>
+            <%= hidden_field_tag :price, @idea.price, class: 'form-control' %>
+            <%= hidden_field_tag :category, @idea.category, class: 'form-control' %>
+            <%= hidden_field_tag :size, @idea.size, class: 'form-control' %>
+            <%= hidden_field_tag :status, "Done", class: 'form-control' %>
+            <%= hidden_field_tag :rating, @idea.rating, class: 'form-control' %>
+            <%= hidden_field_tag :artist_id, bid.artist_id, class: 'form-control' %>
+
+            <div class="form-group">
+              <div class="col-md-6">
+                <%= submit_tag "Pick Artist", class: 'btn btn-primary' %>
+              </div>
+            </div>
+          <% end %>
+
+        </td>
         <td></td>
       </tr>
 
@@ -89,3 +114,7 @@
   </tbody>
 
 <% end %>
+
+
+
+
