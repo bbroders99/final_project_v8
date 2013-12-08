@@ -5,7 +5,7 @@ class Artist < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 	has_many :ideas
-	has_many :portfolio_images
+	has_many :portfolio_images, :dependent => :destroy
 	has_many :bids
 
 	#validates :first_name, :presence => true

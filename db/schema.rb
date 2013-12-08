@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131127041801) do
+ActiveRecord::Schema.define(version: 20131208214517) do
 
   create_table "artists", force: true do |t|
     t.string   "first_name"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20131127041801) do
   end
 
   create_table "portfolio_images", force: true do |t|
-    t.string  "url"
+    t.string  "image"
     t.integer "artist_id"
   end
 
