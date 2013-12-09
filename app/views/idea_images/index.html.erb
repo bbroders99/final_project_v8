@@ -18,7 +18,7 @@
   <tbody>
     <% @idea_images.each do |idea_image| %>
       <tr>
-        <td><%= image_tag idea_image.image, :width => 100 %></td>
+        <td><%= image_tag idea_image.image, :height => 50 %></td>
         <td><%= idea_image.idea.title %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, idea_image_url(idea_image), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_idea_image_url(idea_image), class: 'btn btn-warning' %></td>

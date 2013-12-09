@@ -40,18 +40,17 @@
   <dt># of bids</dt>
   <dd> <%= @idea.bids.count %>
 
-  <dt>Images</dt>
-  <dd>
-     <% a = @idea.id %>
-     <% b = IdeaImage.where(:idea_id => a) %>
-     
-     <% b.each do |b| %>
-        <%= image_tag b.image, :width => 200 %>
-     <% end %>
-  </dd>
-
 </dl>
 
+<div class="page-header">
+  <h3>Images</h3>
+</div> 
+     <% a = @idea.id %>
+   <% b = IdeaImage.where(:idea_id => a) %>
+   
+   <% b.each do |b| %>
+      <%= image_tag b.image, :height => 200 %>
+   <% end %>
 
 <!-- Rate artist -->
 

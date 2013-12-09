@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>FinalProjectV7</title>
 
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/slate/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/spacelab/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
 
   <style>
@@ -58,7 +58,8 @@
           <li><%= link_to "Artist sign up", new_artist_registration_path %></li>
           <li><%= link_to "Artist login", new_artist_session_path %></li>
         <% end %>
-                <li><a href="#">About</a></li>
+          <li><%= link_to("Home", "/home") %></li>
+
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -75,17 +76,9 @@
       </li>
     </ul>
 
-
-
     </div><!-- /.navbar-collapse -->
   </nav>
-
-  <% if buyer_signed_in? %>
-     <p>Hi Buyer!</p>
-  <% elsif artist_signed_in? %>
-    <p>Hi Artist!</p>
-  <% end %>
-  
+ 
 
   <div class="container">
     <% if notice.present? %>
