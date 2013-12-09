@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>FinalProjectV7</title>
+  <title>Ardeea</title>
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/spacelab/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
@@ -58,8 +58,6 @@
           <li><%= link_to "Artist sign up", new_artist_registration_path %></li>
           <li><%= link_to "Artist login", new_artist_session_path %></li>
         <% end %>
-          <li><%= link_to("Home", "/home") %></li>
-
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -97,7 +95,11 @@
     <% end %>
 
 
-    <%= yield %>
+    <%= yield %>    
+
+    <footer>&#169; Ben Morales 2013</footer>
+
   </div>
+
 </body>
 </html>
