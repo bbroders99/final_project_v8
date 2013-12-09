@@ -2,18 +2,19 @@
   <h1>Editing Idea Image #<%= @idea_image.id %></h1>
 </div>
 
-<%= form_tag(idea_image_url(@idea_image), method: 'patch', class: 'form-horizontal') do %>
+<%= form_tag(idea_image_url(@idea_image), method: 'patch', class: 'form-horizontal', multipart: true) do %>
   <div class="form-group">
-    <%= label_tag :url, nil, class: 'col-md-2 control-label' %>
+    <%= label_tag :image, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= text_field_tag :url, @idea_image.url, class: 'form-control' %>
+      <%= file_field_tag :image %>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :idea_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= number_field_tag :idea_id, @idea_image.idea_id, class: 'form-control' %>
+
+      <%= select_tag :idea_id, options_from_collection_for_select(Idea.all, :id, :title, @idea_image.idea_id), class: 'form-control' %>
     </div>
   </div>
 

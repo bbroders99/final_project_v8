@@ -1,10 +1,10 @@
 class PortfolioImage < ActiveRecord::Base
 
-		belongs_to :artist
+	belongs_to :artist
 
-		validates :image, :presence => true
-		validates :artist, :presence => true
+	validates :image, :presence => true
+	validates :artist, :presence => true
 
-		mount_uploader :image, ImageUploader
+	mount_uploader :image, ImageUploader
 
 end

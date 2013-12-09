@@ -7,7 +7,7 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Url</th>
+      <th>Image</th>
       <th>Idea</th>
       <th></th>
       <th></th>
@@ -18,8 +18,8 @@
   <tbody>
     <% @idea_images.each do |idea_image| %>
       <tr>
-        <td><%= idea_image.url %></td>
-        <td><%= idea_image.idea_id %></td>
+        <td><%= image_tag idea_image.image, :width => 100 %></td>
+        <td><%= idea_image.idea.title %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, idea_image_url(idea_image), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_idea_image_url(idea_image), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, idea_image_url(idea_image), method: 'delete', data: { confirm: "Do you really want to delete this idea_image?" }, class: 'btn btn-danger' %></td>
@@ -27,4 +27,3 @@
     <% end %>
   </tbody>
 </table>
-

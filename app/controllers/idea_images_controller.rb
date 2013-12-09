@@ -14,7 +14,7 @@ class IdeaImagesController < ApplicationController
 
   def create
     @idea_image = IdeaImage.new
-    @idea_image.url = params[:url]
+    @idea_image.image = params[:image]
     @idea_image.idea_id = params[:idea_id]
 
     if @idea_image.save
@@ -30,7 +30,7 @@ class IdeaImagesController < ApplicationController
 
   def update
     @idea_image = IdeaImage.find_by(id: params[:id])
-    @idea_image.url = params[:url]
+    @idea_image.image = params[:image]
     @idea_image.idea_id = params[:idea_id]
 
     if @idea_image.save
