@@ -16,9 +16,4 @@ class Artist < ActiveRecord::Base
     	return first_name + " " + last_name
 	end
 
-	def portfolio_images
-		return PortfolioImage.where(artist_id)
-	end
-
-	
 end

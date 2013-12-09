@@ -19872,3 +19872,68 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 18:10:03 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 18:10:03 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 18:19:09 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IdeasController#index as HTML
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 2]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 7]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered ideas/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 136ms (Views: 124.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 18:19:09 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 18:19:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 18:19:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 18:19:10 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 18:19:10 -0600
+
+
+Started GET "/ideas/2" for 127.0.0.1 at 2013-12-08 18:19:12 -0600
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = 2 LIMIT 1[0m
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 2]]
+  [1m[35mBid Load (0.0ms)[0m  SELECT "bids".* FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 2]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 1
+  Rendered ideas/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2013-12-08 18:19:14 -0600
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 1[0m
+  [1m[35mPortfolioImage Load (0.0ms)[0m  SELECT "portfolio_images".* FROM "portfolio_images" WHERE "portfolio_images"."artist_id" = 1
+  Rendered artists/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 2.0ms)
