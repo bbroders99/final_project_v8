@@ -45,35 +45,46 @@
         <li><%= link_to("Bids", "/bids") %></li>
         <li><%= link_to("Idea Images", "/idea_images") %></li>
         <li><%= link_to("Portfolio Images", "/portfolio_images") %></li>
-        <% if buyer_signed_in? %>
-          <li><%= link_to current_buyer.full_name + " acct", edit_buyer_registration_path %></li>
-          <li><%= link_to "Logout Buyer" , destroy_buyer_session_path, method: :delete %></li>
-        <% elsif artist_signed_in? %> 
-          <li><%= link_to current_artist.full_name, edit_artist_registration_path %></li>
-          <li><%= link_to "Logout Artist", destroy_artist_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Buyer sign up", new_buyer_registration_path %></li>
-          <li><%= link_to "Buyer login", new_buyer_session_path %></li>
-          <li><a href="#">-</a></li>
-          <li><%= link_to "Artist sign up", new_artist_registration_path %></li>
-          <li><%= link_to "Artist login", new_artist_session_path %></li>
-        <% end %>
-
       </ul>
+       
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-
+        <% if buyer_signed_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_buyer.full_name %> <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Account", edit_buyer_url(current_buyer.id) %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Logout " + current_buyer.full_name , destroy_buyer_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% elsif artist_signed_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_artist.full_name %> <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Account", edit_artist_url(current_artist.id) %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Logout " + current_artist.full_name, destroy_artist_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Buyer<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Buyer sign up", new_buyer_registration_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Buyer login", new_buyer_session_path %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Artist<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Artist sign up", new_artist_registration_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Artist login", new_artist_session_path %></li>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
  

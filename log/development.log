@@ -29000,3 +29000,1857 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:21:02 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:21:02 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:25:06 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:25:06 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:25:06 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:25:06 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:25:06 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:25:06 -0600
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 22:25:08 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  Rendered buyers/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 22:26:37 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  Rendered buyers/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:26:37 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:26:37 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:26:37 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:26:37 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:26:37 -0600
+
+
+Started PATCH "/buyers/2" for 127.0.0.1 at 2013-12-08 22:26:47 -0600
+Processing by BuyersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lop4UjkIHfo7l7/37dTn6VtmhleE7573lGQUE8QPNOY=", "first_name"=>"Levi", "last_name"=>"Moralez", "commit"=>"Update Buyer", "id"=>"2"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (5.0ms)[0m  [1mUPDATE "buyers" SET "last_name" = ? WHERE "buyers"."id" = 2[0m  [["last_name", "Moralez"]]
+  [1m[35m (7.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/buyers
+Completed 302 Found in 35ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/buyers" for 127.0.0.1 at 2013-12-08 22:26:47 -0600
+Processing by BuyersController#index as HTML
+  [1m[36mBuyer Load (2.0ms)[0m  [1mSELECT "buyers".* FROM "buyers"[0m
+  Rendered buyers/index.html.erb within layouts/application (6.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:26:47 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:26:48 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:26:48 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:26:48 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:26:48 -0600
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 22:26:52 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  Rendered buyers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buyers/edit" for 127.0.0.1 at 2013-12-08 22:26:53 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/buyers" for 127.0.0.1 at 2013-12-08 22:27:29 -0600
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lop4UjkIHfo7l7/37dTn6VtmhleE7573lGQUE8QPNOY=", "buyer"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "buyers" SET "encrypted_password" = ? WHERE "buyers"."id" = 2[0m  [["encrypted_password", "$2a$10$NVz4/GmjJqNcu4D.TgRVu.uulgKOpDThK53wOqUgSo2qGRxodetoa"]]
+  [1m[35m (5.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 212ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:27:30 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:27:30 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:30 -0600
+
+
+Started DELETE "/buyers/sign_out" for 127.0.0.1 at 2013-12-08 22:27:33 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Lop4UjkIHfo7l7/37dTn6VtmhleE7573lGQUE8QPNOY="}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:27:33 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:27:33 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:33 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:33 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:33 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:33 -0600
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:27:35 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:27:42 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BF+qsiFTl5D34T0NPQcMAqBYu7Ce05lFTuaXdk38GkE=", "buyer"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."email" = 'b@b.com' ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 76ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BF+qsiFTl5D34T0NPQcMAqBYu7Ce05lFTuaXdk38GkE=", "buyer"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 89ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:27:42 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:42 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:42 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:42 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:42 -0600
+
+
+Started POST "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:27:47 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BF+qsiFTl5D34T0NPQcMAqBYu7Ce05lFTuaXdk38GkE=", "buyer"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."email" = 'b@b.com' ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "buyers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "buyers"."id" = 2  [["last_sign_in_at", Mon, 09 Dec 2013 04:21:01 UTC +00:00], ["current_sign_in_at", Mon, 09 Dec 2013 04:27:47 UTC +00:00], ["sign_in_count", 7]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 134ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:27:47 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:27:47 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:47 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:48 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:48 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:48 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:27:50 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."buyer_id" = ?  [["buyer_id", 2]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 7]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered ideas/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 68ms (Views: 47.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/buyers" for 127.0.0.1 at 2013-12-08 22:27:52 -0600
+Processing by BuyersController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers"[0m
+  Rendered buyers/index.html.erb within layouts/application (3.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 22:27:55 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  Rendered buyers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/buyers/2" for 127.0.0.1 at 2013-12-08 22:27:58 -0600
+Processing by BuyersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bu81vt54lHTEp4bHBijWgaADA0QE9/05W7fJbolvQAs=", "first_name"=>"Levi", "last_name"=>"Morales", "commit"=>"Update Buyer", "id"=>"2"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "buyers" SET "last_name" = ? WHERE "buyers"."id" = 2  [["last_name", "Morales"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/buyers
+Completed 302 Found in 29ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/buyers" for 127.0.0.1 at 2013-12-08 22:27:58 -0600
+Processing by BuyersController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers"
+  Rendered buyers/index.html.erb within layouts/application (5.0ms)
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:58 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:27:58 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:58 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:58 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:27:58 -0600
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 22:28:00 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  Rendered buyers/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buyers/edit" for 127.0.0.1 at 2013-12-08 22:28:01 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/buyers" for 127.0.0.1 at 2013-12-08 22:28:12 -0600
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bu81vt54lHTEp4bHBijWgaADA0QE9/05W7fJbolvQAs=", "buyer"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (2.0ms)[0m  UPDATE "buyers" SET "encrypted_password" = ? WHERE "buyers"."id" = 2  [["encrypted_password", "$2a$10$kxeagKz28vJwSlCo.BS/y.bRiqkk.LRiORlO.KCM3/jbP5nLbt8zO"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 196ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:28:12 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:12 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:28:12 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:13 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:13 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:13 -0600
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 22:28:25 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  Rendered buyers/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 22:28:30 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  Rendered buyers/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:28:30 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:30 -0600
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 22:28:40 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+  Rendered buyers/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:28:40 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:40 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:40 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:40 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:40 -0600
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 22:28:41 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (3.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2013-12-08 22:28:42 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:28:42 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/1/Workflow.png" for 127.0.0.1 at 2013-12-08 22:28:42 -0600
+
+ActionController::RoutingError (No route matches [GET] "/artists/1/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (114.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 22:28:44 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (4.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/buyers/sign_out" for 127.0.0.1 at 2013-12-08 22:28:45 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Bu81vt54lHTEp4bHBijWgaADA0QE9/05W7fJbolvQAs="}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:28:45 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:28:45 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:45 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:45 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:45 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:45 -0600
+
+
+Started GET "/artists/sign_in" for 127.0.0.1 at 2013-12-08 22:28:48 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artists/sign_in" for 127.0.0.1 at 2013-12-08 22:28:55 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tvwlxRe8Lfpo43yxWWnKSOBf/kw2rwJ14QhQNP3jYgQ=", "artist"=>{"email"=>"x@x.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."email" = 'x@x.com' ORDER BY "artists"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "artists" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "artists"."id" = 1  [["last_sign_in_at", Sun, 08 Dec 2013 22:27:01 UTC +00:00], ["current_sign_in_at", Mon, 09 Dec 2013 04:28:55 UTC +00:00], ["sign_in_count", 8]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 118ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:28:55 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 41ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:28:55 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:55 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:56 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:56 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:28:56 -0600
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2013-12-08 22:28:58 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+  Rendered artists/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buyers/edit" for 127.0.0.1 at 2013-12-08 22:30:31 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:30:31 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buyers/edit" for 127.0.0.1 at 2013-12-08 22:30:51 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 3ms
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:30:51 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2013-12-08 22:30:54 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+  Rendered artists/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:30:54 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:30:54 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:30:54 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:30:54 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:30:54 -0600
+
+
+Started GET "/artists/edit" for 127.0.0.1 at 2013-12-08 22:30:55 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2013-12-08 22:30:58 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1[0m
+  Rendered artists/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:30:58 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:30:58 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:30:58 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:30:58 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:30:58 -0600
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2013-12-08 22:31:55 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1[0m
+  Rendered artists/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:31:55 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:31:55 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:31:55 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:31:55 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:31:55 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:31:57 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/artists/sign_out" for 127.0.0.1 at 2013-12-08 22:31:59 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4caujf8aQcafPFteZt5eujvgL/4J/W4cVaR8eoer5wY="}
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:31:59 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:31:59 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:31:59 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:31:59 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:31:59 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:31:59 -0600
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:32:00 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:32:06 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VfGP6sN66CZPV3dfwNKsLiWULjxWcoL47Tzmj5NnedQ=", "buyer"=>{"email"=>"a@a.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."email" = 'a@a.com' ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "buyers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "buyers"."id" = 1  [["last_sign_in_at", Mon, 09 Dec 2013 04:06:50 UTC +00:00], ["current_sign_in_at", Mon, 09 Dec 2013 04:32:06 UTC +00:00], ["sign_in_count", 12]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 107ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:32:06 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:32:06 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:32:06 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:32:06 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:32:06 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:32:06 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:32:22 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:32:22 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:32:22 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:32:22 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:32:22 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:32:22 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:34:19 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:34:19 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:34:19 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:34:19 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:34:19 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:34:19 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:34:31 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:34:31 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:34:31 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:34:31 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:34:31 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:34:31 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:35:18 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:35:19 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:35:19 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:35:19 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:35:19 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:35:19 -0600
+
+
+Started GET "/buyers/1/edit" for 127.0.0.1 at 2013-12-08 22:35:32 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  Rendered buyers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/buyers/sign_out" for 127.0.0.1 at 2013-12-08 22:35:37 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fiZmBm6RC6q26HLFzkCu9RXCtlvZY4EMaKbSVILo5j4="}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:35:37 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
+    66:       <ul class="nav navbar-nav navbar-right">
+    67:         <li><a href="#">Link</a></li>
+    68:         <li class="dropdown">
+    69:         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_buyer.full_name %> <b class="caret"></b></a>
+    70:         <ul class="dropdown-menu">
+    71:           <li><%= link_to "Account", edit_buyer_url(current_buyer.id) %></li>
+    72:           <li><%= link_to "Logout " + current_buyer.full_name , destroy_buyer_session_path, method: :delete %></li>
+  app/views/layouts/application.html.erb:69:in `_app_views_layouts_application_html_erb__705851807_27756396'
+  app/controllers/pages_controller.rb:4:in `home'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started DELETE "/buyers/sign_out" for 127.0.0.1 at 2013-12-08 22:35:45 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fiZmBm6RC6q26HLFzkCu9RXCtlvZY4EMaKbSVILo5j4="}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 4ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.0.1) lib/action_controller/metal/request_forgery_protection.rb:163:in `handle_unverified_request'
+  actionpack (4.0.1) lib/action_controller/metal/request_forgery_protection.rb:170:in `handle_unverified_request'
+  devise (3.2.1) lib/devise/controllers/helpers.rb:182:in `handle_unverified_request'
+  actionpack (4.0.1) lib/action_controller/metal/request_forgery_protection.rb:177:in `verify_authenticity_token'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:417:in `_run__472860555__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__61607392__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.0ms)
+
+
+Started GET "/buyers/1/edit" for 127.0.0.1 at 2013-12-08 22:37:15 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", "1"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_buyer rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:37:15 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb__705851807_28855644 RAISED C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/views/layouts/application.html.erb:109: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/views/layouts/application.html.erb:111: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts_application_html_erb__705851807_28855644(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ardeea</title>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
+
+  <style>
+    /* Only necessary if you are using navbar-fixed-top */
+    body {
+      padding-top: 50px;
+    }
+  </style>
+
+  ';@output_buffer.append=( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_append='
+';@output_buffer.safe_append='  ';@output_buffer.append=( javascript_include_tag "application" );@output_buffer.safe_append='
+';@output_buffer.safe_append='  ';@output_buffer.append=( csrf_meta_tags );@output_buffer.safe_append='
+';@output_buffer.safe_append='
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- ';@output_buffer.append=( link_to Rails.application.class.parent_name, root_url, :class => "navbar-brand" );@output_buffer.safe_append=' -->
+      ';@output_buffer.append=( link_to "Ardeea", root_url, :class => "navbar-brand" );@output_buffer.safe_append='
+';@output_buffer.safe_append='    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>';@output_buffer.append=( link_to("Ideas", "/ideas") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Buyers", "/buyers") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Artists", "/artists") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Bids", "/bids") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Idea Images", "/idea_images") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Portfolio Images", "/portfolio_images") );@output_buffer.safe_append='</li>
+
+
+';         if buyer_signed_in? 
+@output_buffer.safe_append='          <li>';@output_buffer.append=( link_to "Account", edit_buyer_url(current_buyer.id) );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Logout " + current_buyer.full_name , destroy_buyer_session_path, method: :delete );@output_buffer.safe_append='</li>
+';         elsif artist_signed_in?  
+@output_buffer.safe_append='          <li>';@output_buffer.append=( link_to current_artist.full_name + " Account", edit_artist_url(current_artist.id) );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Logout Artist", destroy_artist_session_path, method: :delete );@output_buffer.safe_append='</li>
+';         else 
+@output_buffer.safe_append='          <li>';@output_buffer.append=( link_to "Buyer sign up", new_buyer_registration_path );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Buyer login", new_buyer_session_path );@output_buffer.safe_append='</li>
+          <li><a href="#">-</a></li>
+          <li>';@output_buffer.append=( link_to "Artist sign up", new_artist_registration_path );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Artist login", new_artist_session_path );@output_buffer.safe_append='</li>
+';         end 
+@output_buffer.safe_append='
+      </ul>
+      
+';       if buyer_signed_in? 
+@output_buffer.safe_append='      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">';@output_buffer.append=( current_buyer.full_name );@output_buffer.safe_append=' <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li>';@output_buffer.append=( link_to "Account", edit_buyer_url(current_buyer.id) );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Logout " + current_buyer.full_name , destroy_buyer_session_path, method: :delete );@output_buffer.safe_append='</li>
+          <li class="divider"></li>
+          <li>';@output_buffer.append=( link_to "Logout " + current_buyer.full_name , destroy_buyer_session_path, method: :delete );@output_buffer.safe_append='</li>
+        </ul>
+      </li>
+    </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </nav>
+ 
+
+  <div class="container">
+';     if notice.present? 
+@output_buffer.safe_append='      <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        ';@output_buffer.append=( notice );@output_buffer.safe_append='
+';@output_buffer.safe_append='      </div>
+';     end 
+@output_buffer.safe_append='
+  <div class="container">
+';     if alert.present? 
+@output_buffer.safe_append='      <div class="alert alert-dismissable alert-warning" >
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        ';@output_buffer.append=( alert );@output_buffer.safe_append='
+';@output_buffer.safe_append='      </div>
+';     end 
+@output_buffer.safe_append='
+
+    ';@output_buffer.append=( yield );@output_buffer.safe_append='    
+';@output_buffer.safe_append='
+    <footer>&#169; Ben Morales 2013</footer>
+
+  </div>
+
+</body>
+</html>
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/controllers/pages_controller.rb:4:in `home'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:403:in `_run__726847226__process_action__callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__61607392__call__callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/views/layouts/application.html.erb:109: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/views/layouts/application.html.erb:111: syntax error, unexpected $end, expecting keyword_end):
+    106: </body>
+    107: </html>
+  app/controllers/pages_controller.rb:4:in `home'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.0ms)
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:38:18 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+ERROR: compiling _app_views_layouts_application_html_erb__705851807_28855644 RAISED C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/views/layouts/application.html.erb:109: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/views/layouts/application.html.erb:111: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_layouts_application_html_erb__705851807_28855644(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ardeea</title>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/spacelab/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
+
+  <style>
+    /* Only necessary if you are using navbar-fixed-top */
+    body {
+      padding-top: 50px;
+    }
+  </style>
+
+  ';@output_buffer.append=( stylesheet_link_tag    "application", :media => "all" );@output_buffer.safe_append='
+';@output_buffer.safe_append='  ';@output_buffer.append=( javascript_include_tag "application" );@output_buffer.safe_append='
+';@output_buffer.safe_append='  ';@output_buffer.append=( csrf_meta_tags );@output_buffer.safe_append='
+';@output_buffer.safe_append='
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- ';@output_buffer.append=( link_to Rails.application.class.parent_name, root_url, :class => "navbar-brand" );@output_buffer.safe_append=' -->
+      ';@output_buffer.append=( link_to "Ardeea", root_url, :class => "navbar-brand" );@output_buffer.safe_append='
+';@output_buffer.safe_append='    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>';@output_buffer.append=( link_to("Ideas", "/ideas") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Buyers", "/buyers") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Artists", "/artists") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Bids", "/bids") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Idea Images", "/idea_images") );@output_buffer.safe_append='</li>
+        <li>';@output_buffer.append=( link_to("Portfolio Images", "/portfolio_images") );@output_buffer.safe_append='</li>
+
+
+';         if buyer_signed_in? 
+@output_buffer.safe_append='          <li>';@output_buffer.append=( link_to "Account", edit_buyer_url(current_buyer.id) );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Logout " + current_buyer.full_name , destroy_buyer_session_path, method: :delete );@output_buffer.safe_append='</li>
+';         elsif artist_signed_in?  
+@output_buffer.safe_append='          <li>';@output_buffer.append=( link_to current_artist.full_name + " Account", edit_artist_url(current_artist.id) );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Logout Artist", destroy_artist_session_path, method: :delete );@output_buffer.safe_append='</li>
+';         else 
+@output_buffer.safe_append='          <li>';@output_buffer.append=( link_to "Buyer sign up", new_buyer_registration_path );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Buyer login", new_buyer_session_path );@output_buffer.safe_append='</li>
+          <li><a href="#">-</a></li>
+          <li>';@output_buffer.append=( link_to "Artist sign up", new_artist_registration_path );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Artist login", new_artist_session_path );@output_buffer.safe_append='</li>
+';         end 
+@output_buffer.safe_append='
+      </ul>
+      
+';       if buyer_signed_in? 
+@output_buffer.safe_append='      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">';@output_buffer.append=( current_buyer.full_name );@output_buffer.safe_append=' <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li>';@output_buffer.append=( link_to "Account", edit_buyer_url(current_buyer.id) );@output_buffer.safe_append='</li>
+          <li>';@output_buffer.append=( link_to "Logout " + current_buyer.full_name , destroy_buyer_session_path, method: :delete );@output_buffer.safe_append='</li>
+          <li class="divider"></li>
+          <li>';@output_buffer.append=( link_to "Logout " + current_buyer.full_name , destroy_buyer_session_path, method: :delete );@output_buffer.safe_append='</li>
+        </ul>
+      </li>
+    </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </nav>
+ 
+
+  <div class="container">
+';     if notice.present? 
+@output_buffer.safe_append='      <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        ';@output_buffer.append=( notice );@output_buffer.safe_append='
+';@output_buffer.safe_append='      </div>
+';     end 
+@output_buffer.safe_append='
+  <div class="container">
+';     if alert.present? 
+@output_buffer.safe_append='      <div class="alert alert-dismissable alert-warning" >
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        ';@output_buffer.append=( alert );@output_buffer.safe_append='
+';@output_buffer.safe_append='      </div>
+';     end 
+@output_buffer.safe_append='
+
+    ';@output_buffer.append=( yield );@output_buffer.safe_append='    
+';@output_buffer.safe_append='
+    <footer>&#169; Ben Morales 2013</footer>
+
+  </div>
+
+</body>
+</html>
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/responder.rb:233:in `default_render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/responder.rb:161:in `to_html'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/responder.rb:154:in `respond'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/responder.rb:147:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/mime_responds.rb:330:in `respond_with'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.2.1/app/controllers/devise/sessions_controller.rb:10:in `new'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:443:in `_run__472860555__process_action__callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/mapper.rb:44:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__61607392__call__callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+Completed 500 Internal Server Error in 107ms
+
+ActionView::Template::Error (C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/views/layouts/application.html.erb:109: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/views/layouts/application.html.erb:111: syntax error, unexpected $end, expecting keyword_end):
+    106: </body>
+    107: </html>
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.1) lib/action_view/template.rb:248:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.1) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/responder.rb:233:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/responder.rb:161:in `to_html'
+  actionpack (4.0.1) lib/action_controller/metal/responder.rb:154:in `respond'
+  actionpack (4.0.1) lib/action_controller/metal/responder.rb:147:in `call'
+  actionpack (4.0.1) lib/action_controller/metal/mime_responds.rb:330:in `respond_with'
+  devise (3.2.1) app/controllers/devise/sessions_controller.rb:10:in `new'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:443:in `_run__472860555__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__61607392__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:43:30 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
+    84:           </li>
+    85:         <% else %>
+    86:           <li class="dropdown">
+    87:             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_buyer.full_name %> <b class="caret"></b></a>
+    88:             <ul class="dropdown-menu">
+    89:               <li><%= link_to "Buyer sign up", new_buyer_registration_path %></li>
+    90:               <li class="divider"></li>
+  app/views/layouts/application.html.erb:87:in `_app_views_layouts_application_html_erb__705851807_28110228'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.0ms)
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:44:02 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:44:02 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:02 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:02 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:44:04 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:44:33 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:44:33 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:33 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:33 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:33 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:33 -0600
+
+
+Started GET "/artists/sign_in" for 127.0.0.1 at 2013-12-08 22:44:41 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:44:45 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:44:53 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L8VW3e8qexqm9uOe0Oy6TfbL7t1APpr5h7Nh5cyRFpk=", "buyer"=>{"email"=>"a@a.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."email" = 'a@a.com' ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "buyers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "buyers"."id" = 1[0m  [["last_sign_in_at", Mon, 09 Dec 2013 04:32:06 UTC +00:00], ["current_sign_in_at", Mon, 09 Dec 2013 04:44:53 UTC +00:00], ["sign_in_count", 13]]
+  [1m[35m (7.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 118ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:44:53 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:44:53 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:53 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:53 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:53 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:53 -0600
+
+
+Started GET "/buyers/1/edit" for 127.0.0.1 at 2013-12-08 22:44:56 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  Rendered buyers/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/buyers/sign_out" for 127.0.0.1 at 2013-12-08 22:44:59 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Px2OvAaQ56E43mal4+Bk1vGX/9casIG5lZah0bJS1Sk="}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:44:59 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:44:59 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:59 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:59 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:44:59 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:00 -0600
+
+
+Started GET "/artists/sign_in" for 127.0.0.1 at 2013-12-08 22:45:02 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artists/sign_in" for 127.0.0.1 at 2013-12-08 22:45:17 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CQoSUzv8POG9xx4o5ogWZSE1xRBX1VqC441p/v3dGTY=", "artist"=>{"email"=>"x@x.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."email" = 'x@x.com' ORDER BY "artists"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "artists" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "artists"."id" = 1[0m  [["last_sign_in_at", Mon, 09 Dec 2013 04:28:55 UTC +00:00], ["current_sign_in_at", Mon, 09 Dec 2013 04:45:17 UTC +00:00], ["sign_in_count", 9]]
+  [1m[35m (4.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 133ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:45:17 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
+    75:           </li>
+    76:         <% elsif artist_signed_in? %>
+    77:           <li class="dropdown">
+    78:             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_buyer.full_name %> <b class="caret"></b></a>
+    79:             <ul class="dropdown-menu">
+    80:               <li><%= link_to "Account", edit_artist_url(current_artist.id) %></li>
+    81:               <li class="divider"></li>
+  app/views/layouts/application.html.erb:78:in `_app_views_layouts_application_html_erb__705851807_29902356'
+  app/controllers/pages_controller.rb:4:in `home'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:45:33 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:45:34 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:34 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:34 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:34 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:34 -0600
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2013-12-08 22:45:40 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+  Rendered artists/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/artists/1" for 127.0.0.1 at 2013-12-08 22:45:43 -0600
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gLHE7X9WVauH0v9OzRgUh/GLoJyEJRXrccXGsbjG6q4=", "first_name"=>"Tricia", "last_name"=>"Vail", "bio"=>"I love to paint!!!", "commit"=>"Update Artist", "id"=>"1"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "artists" SET "bio" = ? WHERE "artists"."id" = 1  [["bio", "I love to paint!!!"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 63ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 22:45:43 -0600
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (6.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:43 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:45:43 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:44 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:44 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:44 -0600
+
+
+Started DELETE "/artists/sign_out" for 127.0.0.1 at 2013-12-08 22:45:47 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gLHE7X9WVauH0v9OzRgUh/GLoJyEJRXrccXGsbjG6q4="}
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 ORDER BY "artists"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:45:47 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:45:47 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:47 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:47 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:47 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:47 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:45:59 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:45:59 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:59 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:59 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:59 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:45:59 -0600
