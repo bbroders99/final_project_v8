@@ -49,7 +49,7 @@
           <li><%= link_to current_buyer.full_name + " acct", edit_buyer_registration_path %></li>
           <li><%= link_to "Logout Buyer" , destroy_buyer_session_path, method: :delete %></li>
         <% elsif artist_signed_in? %> 
-          <li><%= link_to current_artist.email, edit_artist_registration_path %></li>
+          <li><%= link_to current_artist.full_name, edit_artist_registration_path %></li>
           <li><%= link_to "Logout Artist", destroy_artist_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Buyer sign up", new_buyer_registration_path %></li>
@@ -88,9 +88,9 @@
 
   <div class="container">
     <% if alert.present? %>
-      <div class="alert alert-dismissable alert-warning">
+      <div class="alert alert-dismissable alert-warning" >
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <%= notice %>
+        <%= alert %>
       </div>
     <% end %>
 

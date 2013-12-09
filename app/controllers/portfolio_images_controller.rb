@@ -1,9 +1,16 @@
 class PortfolioImagesController < ApplicationController
 
   before_action :set_portfolio_image, :only => [:show, :edit, :update, :destroy]
+  before_action :artist_must_be_owner_of_portfolio_image, :only => [:edit, :update, :destroy]
 
   def set_portfolio_image
     @portfolio_image = PortfolioImage.find(params[:id])
+  end
+
+  def artist_must_be_owner_of_portfolio_image
+    unless @portfolio_image.artist == current_artist
+      redirect_to root_url, :alert => "You are not authorized for that."
+    end
   end
 
 

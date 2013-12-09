@@ -1,9 +1,17 @@
 class BuyersController < ApplicationController
 
   before_action :set_buyer, :only => [:show, :edit, :update, :destroy]
+  before_action :authorize_buyer, :only => [:edit, :update, :destroy]
+
 
   def set_buyer
     @buyer = Buyer.find(params[:id])
+  end
+
+  def authorize_buyer
+    unless @buyer == current_buyer
+      redirect_to root_url, :alert => "You are not authorized for that."
+    end
   end
 
   def index

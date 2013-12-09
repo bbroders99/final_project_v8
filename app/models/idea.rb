@@ -17,4 +17,5 @@ class Idea < ActiveRecord::Base
 	end
 
 
+
 end

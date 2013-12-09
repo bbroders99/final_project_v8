@@ -6,7 +6,6 @@ class IdeaImagesController < ApplicationController
     @idea_image = IdeaImage.find(params[:id])
   end
 
-
   def index
     @idea_images = IdeaImage.all
   end

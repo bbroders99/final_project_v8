@@ -26287,3 +26287,2716 @@ Processing by ArtistsController#show as HTML
   Rendered artists/show.html.erb within layouts/application (15.0ms)
   [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
 Completed 200 OK in 34ms (Views: 28.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/artists/6" for 127.0.0.1 at 2013-12-08 21:27:44 -0600
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 6[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 6
+  [1m[36mPortfolioImage Load (0.0ms)[0m  [1mSELECT "portfolio_images".* FROM "portfolio_images" WHERE "portfolio_images"."artist_id" = 6[0m
+  Rendered artists/show.html.erb within layouts/application (45.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 76ms (Views: 56.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:27:44 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:27:44 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:27:44 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:27:44 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:27:44 -0600
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:27:47 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (5.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/3/edit" for 127.0.0.1 at 2013-12-08 21:27:54 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:27:54 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/3/Workflow.png" for 127.0.0.1 at 2013-12-08 21:27:54 -0600
+
+ActionController::RoutingError (No route matches [GET] "/artists/3/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (135.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:30:58 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:30:58 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:30:58 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:30:58 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:30:58 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:30:58 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:37:11 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:37:11 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:37:11 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:37:11 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:37:12 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:37:12 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:37:18 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:37:18 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:37:18 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:37:19 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:37:19 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:37:19 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:38:49 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:38:49 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:38:49 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:38:49 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:38:49 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:38:49 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:38:57 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:38:57 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:38:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:38:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:38:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:38:57 -0600
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:39:00 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (10.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/3/edit" for 127.0.0.1 at 2013-12-08 21:39:02 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:39:03 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/3/Workflow.png" for 127.0.0.1 at 2013-12-08 21:39:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/artists/3/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (118.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:39:07 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:39:07 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:39:07 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:39:07 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:39:07 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:39:07 -0600
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:40:10 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (14.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/3/edit" for 127.0.0.1 at 2013-12-08 21:40:12 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:40:12 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/3/Workflow.png" for 127.0.0.1 at 2013-12-08 21:40:13 -0600
+
+ActionController::RoutingError (No route matches [GET] "/artists/3/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (131.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:41:46 -0600
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (22.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/3/edit" for 127.0.0.1 at 2013-12-08 21:41:49 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:41:49 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/3/Workflow.png" for 127.0.0.1 at 2013-12-08 21:41:49 -0600
+
+ActionController::RoutingError (No route matches [GET] "/artists/3/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (142.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:41:57 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:41:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:41:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:41:57 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:41:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:41:57 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:42:01 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:42:01 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:42:01 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:42:02 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:42:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:42:02 -0600
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:42:07 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (6.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/3/edit" for 127.0.0.1 at 2013-12-08 21:42:08 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:42:08 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/3/Workflow.png" for 127.0.0.1 at 2013-12-08 21:42:08 -0600
+
+ActionController::RoutingError (No route matches [GET] "/artists/3/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (121.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:46:00 -0600
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (3.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2013-12-08 21:46:03 -0600
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 1
+  [1m[36mPortfolioImage Load (0.0ms)[0m  [1mSELECT "portfolio_images".* FROM "portfolio_images" WHERE "portfolio_images"."artist_id" = 1[0m
+  Rendered artists/show.html.erb within layouts/application (31.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 46ms (Views: 41.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2013-12-08 21:46:05 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:46:05 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/1/Workflow.png" for 127.0.0.1 at 2013-12-08 21:46:05 -0600
+
+ActionController::RoutingError (No route matches [GET] "/artists/1/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (118.0ms)
+
+
+Started DELETE "/artists/1" for 127.0.0.1 at 2013-12-08 21:46:09 -0600
+Processing by ArtistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5KL9g3LX3trzJWhDrWYxlRx6EyrXXDvE/0XbyeYP5yg=", "id"=>"1"}
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:46:09 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:46:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:46:09 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:46:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:46:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:46:09 -0600
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:46:11 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (4.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buyers" for 127.0.0.1 at 2013-12-08 21:47:19 -0600
+Processing by BuyersController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers"[0m
+  Rendered buyers/index.html.erb within layouts/application (16.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/buyers/1/edit" for 127.0.0.1 at 2013-12-08 21:47:20 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_buyer rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:47:20 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buyers/1/Workflow.png" for 127.0.0.1 at 2013-12-08 21:47:20 -0600
+
+ActionController::RoutingError (No route matches [GET] "/buyers/1/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (127.0ms)
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 21:47:22 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_buyer rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:47:23 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buyers/2/Workflow.png" for 127.0.0.1 at 2013-12-08 21:47:23 -0600
+
+ActionController::RoutingError (No route matches [GET] "/buyers/2/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (124.0ms)
+
+
+Started GET "/buyers/4/edit" for 127.0.0.1 at 2013-12-08 21:47:24 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_buyer rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:47:24 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (2.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/buyers/4/Workflow.png" for 127.0.0.1 at 2013-12-08 21:47:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/buyers/4/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (174.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:47:27 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (3.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/6/edit" for 127.0.0.1 at 2013-12-08 21:47:29 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+  Rendered artists/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/artists/6" for 127.0.0.1 at 2013-12-08 21:47:38 -0600
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5KL9g3LX3trzJWhDrWYxlRx6EyrXXDvE/0XbyeYP5yg=", "first_name"=>"Anonymous", "last_name"=>"User", "bio"=>"I love to draw plants", "commit"=>"Update Artist", "id"=>"6"}
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  UPDATE "artists" SET "bio" = ? WHERE "artists"."id" = 6  [["bio", "I love to draw plants"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 40ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:47:38 -0600
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (7.0ms)
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:47:38 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:47:38 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:47:38 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:47:39 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:47:39 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:47:46 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 21:47:56 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 2]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 7]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered ideas/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 48ms (Views: 37.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/buyers" for 127.0.0.1 at 2013-12-08 21:47:58 -0600
+Processing by BuyersController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers"[0m
+  Rendered buyers/index.html.erb within layouts/application (2.0ms)
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/artists/sign_out" for 127.0.0.1 at 2013-12-08 21:48:00 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5KL9g3LX3trzJWhDrWYxlRx6EyrXXDvE/0XbyeYP5yg="}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 6 ORDER BY "artists"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:48:00 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:48:01 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:01 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:01 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:01 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:01 -0600
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 21:48:02 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 21:48:08 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mLZPl2aVDQdd3sYg7g53Wa+P5c+tm3nbegG3d1cJV44=", "buyer"=>{"email"=>"a@a.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."email" = 'a@a.com' ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "buyers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "buyers"."id" = 1  [["last_sign_in_at", Mon, 09 Dec 2013 02:40:53 UTC +00:00], ["current_sign_in_at", Mon, 09 Dec 2013 03:48:08 UTC +00:00], ["sign_in_count", 10]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:48:08 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:48:08 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:08 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:08 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:08 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:08 -0600
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 21:48:10 -0600
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (4.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/2/edit" for 127.0.0.1 at 2013-12-08 21:48:10 -0600
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:48:10 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/2/Workflow.png" for 127.0.0.1 at 2013-12-08 21:48:11 -0600
+
+ActionController::RoutingError (No route matches [GET] "/artists/2/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (144.0ms)
+
+
+Started DELETE "/artists/2" for 127.0.0.1 at 2013-12-08 21:48:14 -0600
+Processing by ArtistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mTImfnOTrHUdvZ5vOiOstPG4hv3RjFQACjXJnER3KvA=", "id"=>"2"}
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_artist rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:48:14 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:14 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:48:14 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:14 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:14 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:14 -0600
+
+
+Started GET "/buyers" for 127.0.0.1 at 2013-12-08 21:48:15 -0600
+Processing by BuyersController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers"[0m
+  Rendered buyers/index.html.erb within layouts/application (2.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/buyers/4" for 127.0.0.1 at 2013-12-08 21:48:18 -0600
+Processing by BuyersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered buyers/show.html.erb within layouts/application (1.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buyers/2/edit" for 127.0.0.1 at 2013-12-08 21:48:20 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_buyer rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:48:20 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buyers/2/Workflow.png" for 127.0.0.1 at 2013-12-08 21:48:20 -0600
+
+ActionController::RoutingError (No route matches [GET] "/buyers/2/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (136.0ms)
+
+
+Started DELETE "/buyers/2" for 127.0.0.1 at 2013-12-08 21:48:23 -0600
+Processing by BuyersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mTImfnOTrHUdvZ5vOiOstPG4hv3RjFQACjXJnER3KvA=", "id"=>"2"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize_buyer rendered or redirected
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 21:48:23 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:23 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:23 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:23 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:23 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:48:23 -0600
+
+
+Started GET "/buyers/1/edit" for 127.0.0.1 at 2013-12-08 21:48:26 -0600
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  Rendered buyers/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/buyers/1" for 127.0.0.1 at 2013-12-08 21:48:29 -0600
+Processing by BuyersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mTImfnOTrHUdvZ5vOiOstPG4hv3RjFQACjXJnER3KvA=", "first_name"=>"Ben", "last_name"=>"Morales", "commit"=>"Update Buyer", "id"=>"1"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.0ms)[0m  UPDATE "buyers" SET "last_name" = ? WHERE "buyers"."id" = 1  [["last_name", "Morales"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/buyers
+Completed 302 Found in 99ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/buyers" for 127.0.0.1 at 2013-12-08 21:48:29 -0600
+Processing by BuyersController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers"
+  Rendered buyers/index.html.erb within layouts/application (5.0ms)
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:29 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:29 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 21:48:29 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:29 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 21:48:29 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:02:30 -0600
+Processing by IdeasController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 6]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 75ms (Views: 45.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/ideas/6" for 127.0.0.1 at 2013-12-08 22:02:33 -0600
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 6]]
+  [1m[36mIdeaImage Load (0.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."idea_id" = 6[0m
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36mBid Load (0.0ms)[0m  [1mSELECT "bids".* FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 1[0m
+  Rendered ideas/show.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:02:41 -0600
+Processing by IdeasController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 6]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:02:43 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[35mIdeaImage Load (0.0ms)[0m  SELECT "idea_images".* FROM "idea_images"
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered idea_images/index.html.erb within layouts/application (13.0ms)
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/idea_images/new" for 127.0.0.1 at 2013-12-08 22:02:46 -0600
+Processing by IdeaImagesController#new as HTML
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas"
+  Rendered idea_images/new.html.erb within layouts/application (3.0ms)
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:02:59 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mTImfnOTrHUdvZ5vOiOstPG4hv3RjFQACjXJnER3KvA=", "image"=>#<ActionDispatch::Http::UploadedFile:0x370eb88 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-4c3o3h>, @original_filename="Vikrant-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Vikrant-3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"6", "commit"=>"Create Idea Image"}
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "idea_images" ("idea_id", "image") VALUES (?, ?)  [["idea_id", 6], ["image", "Vikrant-3.jpg"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/idea_images
+Completed 302 Found in 54ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:02:59 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[35mIdeaImage Load (0.0ms)[0m  SELECT "idea_images".* FROM "idea_images"
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (26.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:02:59 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:02:59 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:03:00 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:03:00 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:03:00 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:03:02 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."buyer_id" = ?  [["buyer_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas/6" for 127.0.0.1 at 2013-12-08 22:03:04 -0600
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mIdeaImage Load (1.0ms)[0m  SELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."idea_id" = 6
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35mBid Load (0.0ms)[0m  SELECT "bids".* FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 1
+  Rendered ideas/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 47ms (Views: 41.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:03:25 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."buyer_id" = ?  [["buyer_id", 1]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/idea/3" for 127.0.0.1 at 2013-12-08 22:03:37 -0600
+
+ActionController::RoutingError (No route matches [GET] "/idea/3"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (130.0ms)
+
+
+Started GET "/idea/2" for 127.0.0.1 at 2013-12-08 22:03:42 -0600
+
+ActionController::RoutingError (No route matches [GET] "/idea/2"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (127.0ms)
+
+
+Started GET "/idea/8" for 127.0.0.1 at 2013-12-08 22:03:45 -0600
+
+ActionController::RoutingError (No route matches [GET] "/idea/8"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (162.0ms)
+
+
+Started GET "/idea/6" for 127.0.0.1 at 2013-12-08 22:03:51 -0600
+
+ActionController::RoutingError (No route matches [GET] "/idea/6"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (113.0ms)
+
+
+Started DELETE "/buyers/sign_out" for 127.0.0.1 at 2013-12-08 22:04:04 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mTImfnOTrHUdvZ5vOiOstPG4hv3RjFQACjXJnER3KvA="}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:04:04 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:04:04 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:04:04 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:04:04 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:04:04 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:04:04 -0600
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:04:06 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[35mIdeaImage Load (0.0ms)[0m  SELECT "idea_images".* FROM "idea_images"
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/idea_images/new" for 127.0.0.1 at 2013-12-08 22:04:07 -0600
+Processing by IdeaImagesController#new as HTML
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas"
+  Rendered idea_images/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:04:13 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O9iV6eGYDV4Wkpv/UfenVQaEGr57jcpYOtUFhLB/6pY=", "image"=>#<ActionDispatch::Http::UploadedFile:0x3af9a28 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-vwkg9x>, @original_filename="Dan-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Dan-3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"6", "commit"=>"Create Idea Image"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "idea_images" ("idea_id", "image") VALUES (?, ?)[0m  [["idea_id", 6], ["image", "Dan-3.jpg"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/idea_images
+Completed 302 Found in 62ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:04:14 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[36mIdeaImage Load (1.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images"[0m
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:04:14 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:04:14 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:04:14 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:04:14 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:04:14 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:04:18 -0600
+Processing by IdeasController#index as HTML
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 2]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 7]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered ideas/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ideas/6" for 127.0.0.1 at 2013-12-08 22:04:20 -0600
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mIdeaImage Load (1.0ms)[0m  SELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."idea_id" = 6
+  [1m[36mBid Load (1.0ms)[0m  [1mSELECT "bids".* FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 2
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 1[0m
+  Rendered ideas/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:04:51 -0600
+Processing by IdeasController#index as HTML
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas"
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 2]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 7]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered ideas/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 77ms (Views: 64.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:04:52 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[36mIdeaImage Load (0.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images"[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 65ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/idea_images/6/edit" for 127.0.0.1 at 2013-12-08 22:04:54 -0600
+Processing by IdeaImagesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mIdeaImage Load (1.0ms)[0m  SELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :buyer_must_be_owner_of_idea_image rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:04:54 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idea_images/6/Workflow.png" for 127.0.0.1 at 2013-12-08 22:04:54 -0600
+
+ActionController::RoutingError (No route matches [GET] "/idea_images/6/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (133.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:05:13 -0600
+
+SyntaxError (C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/controllers/idea_images_controller.rb:4: syntax error, unexpected ':', expecting ']'
+...idea_image, :only => [:create :edit, :update, :destroy]
+...                               ^
+C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/controllers/idea_images_controller.rb:4: syntax error, unexpected ',', expecting tCOLON2 or '[' or '.'
+...nly => [:create :edit, :update, :destroy]
+...                               ^):
+  activesupport (4.0.1) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__61607392__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:05:13 -0600
+
+SyntaxError (C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/controllers/idea_images_controller.rb:4: syntax error, unexpected ':', expecting ']'
+...idea_image, :only => [:create :edit, :update, :destroy]
+...                               ^
+C:/Users/Morales Ben/Dropbox/03-Ruby/final_project_v8/app/controllers/idea_images_controller.rb:4: syntax error, unexpected ',', expecting tCOLON2 or '[' or '.'
+...nly => [:create :edit, :update, :destroy]
+...                               ^):
+  activesupport (4.0.1) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.1) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.1) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__61607392__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:05:24 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 2]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 7]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered ideas/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 79ms (Views: 61.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:05:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:05:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:05:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:05:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:05:25 -0600
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:05:27 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[35mIdeaImage Load (0.0ms)[0m  SELECT "idea_images".* FROM "idea_images"
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 49ms (Views: 37.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/idea_images/6/edit" for 127.0.0.1 at 2013-12-08 22:05:35 -0600
+Processing by IdeaImagesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mIdeaImage Load (0.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :buyer_must_be_owner_of_idea_image rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:05:35 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idea_images/6/Workflow.png" for 127.0.0.1 at 2013-12-08 22:05:36 -0600
+
+ActionController::RoutingError (No route matches [GET] "/idea_images/6/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (109.0ms)
+
+
+Started DELETE "/idea_images/6" for 127.0.0.1 at 2013-12-08 22:05:40 -0600
+Processing by IdeaImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"O9iV6eGYDV4Wkpv/UfenVQaEGr57jcpYOtUFhLB/6pY=", "id"=>"6"}
+  [1m[35mIdeaImage Load (1.0ms)[0m  SELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :buyer_must_be_owner_of_idea_image rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:05:40 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:05:40 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:05:40 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:05:40 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:05:40 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:05:40 -0600
+
+
+Started GET "/idea_images/new" for 127.0.0.1 at 2013-12-08 22:05:43 -0600
+Processing by IdeaImagesController#new as HTML
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+  Rendered idea_images/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:05:50 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O9iV6eGYDV4Wkpv/UfenVQaEGr57jcpYOtUFhLB/6pY=", "image"=>#<ActionDispatch::Http::UploadedFile:0x34db5f0 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-zs57md>, @original_filename="Ben-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Ben-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"6", "commit"=>"Create Idea Image"}
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `idea' for nil:NilClass):
+  app/controllers/idea_images_controller.rb:11:in `buyer_must_be_owner_of_idea_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.0ms)
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:06:43 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:06:50 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O9iV6eGYDV4Wkpv/UfenVQaEGr57jcpYOtUFhLB/6pY=", "buyer"=>{"email"=>"a@a.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."email" = 'a@a.com' ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "buyers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "buyers"."id" = 1  [["last_sign_in_at", Mon, 09 Dec 2013 03:48:08 UTC +00:00], ["current_sign_in_at", Mon, 09 Dec 2013 04:06:50 UTC +00:00], ["sign_in_count", 11]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:06:51 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:06:51 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:06:51 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:06:51 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:06:51 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:06:51 -0600
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:06:53 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[36mIdeaImage Load (1.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images"[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (24.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/idea_images/new" for 127.0.0.1 at 2013-12-08 22:06:56 -0600
+Processing by IdeaImagesController#new as HTML
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+  Rendered idea_images/new.html.erb within layouts/application (3.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:06:58 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."buyer_id" = ?  [["buyer_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:07:01 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[36mIdeaImage Load (0.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images"[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (14.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/idea_images/new" for 127.0.0.1 at 2013-12-08 22:07:03 -0600
+Processing by IdeaImagesController#new as HTML
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+  Rendered idea_images/new.html.erb within layouts/application (4.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:07:07 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0dNyxW/agMLtlpSZWIN7Rp/PrKMdsdU0E9jNK7WzNSM=", "image"=>#<ActionDispatch::Http::UploadedFile:0x3555540 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-1b5w0sj>, @original_filename="Ben-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Ben-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"2", "commit"=>"Create Idea Image"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `idea' for nil:NilClass):
+  app/controllers/idea_images_controller.rb:11:in `buyer_must_be_owner_of_idea_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.0ms)
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:10:42 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0dNyxW/agMLtlpSZWIN7Rp/PrKMdsdU0E9jNK7WzNSM=", "image"=>#<ActionDispatch::Http::UploadedFile:0x545ea40 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-1l6rfho>, @original_filename="Ben-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Ben-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"6", "commit"=>"Create Idea Image"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `idea_id' for nil:NilClass):
+  app/controllers/idea_images_controller.rb:11:in `buyer_must_be_owner_of_idea_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.0ms)
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:10:58 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0dNyxW/agMLtlpSZWIN7Rp/PrKMdsdU0E9jNK7WzNSM=", "image"=>#<ActionDispatch::Http::UploadedFile:0x542d048 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-1aza07l>, @original_filename="Ben-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Ben-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"6", "commit"=>"Create Idea Image"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `idea' for nil:NilClass):
+  app/controllers/idea_images_controller.rb:11:in `buyer_must_be_owner_of_idea_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (19.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.0ms)
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:11:20 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0dNyxW/agMLtlpSZWIN7Rp/PrKMdsdU0E9jNK7WzNSM=", "image"=>#<ActionDispatch::Http::UploadedFile:0x54428a0 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-y9j25u>, @original_filename="Ben-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Ben-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"6", "commit"=>"Create Idea Image"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `buyer' for nil:NilClass):
+  app/controllers/idea_images_controller.rb:11:in `buyer_must_be_owner_of_idea_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (18.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (58.0ms)
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:12:40 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0dNyxW/agMLtlpSZWIN7Rp/PrKMdsdU0E9jNK7WzNSM=", "image"=>#<ActionDispatch::Http::UploadedFile:0x3932688 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-1o6ahtb>, @original_filename="Ben-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Ben-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"6", "commit"=>"Create Idea Image"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 51ms
+
+SystemStackError (stack level too deep):
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:70
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (72.0ms)
+
+
+Started GET "/idea_images/new" for 127.0.0.1 at 2013-12-08 22:12:59 -0600
+Processing by IdeaImagesController#new as HTML
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+  Rendered idea_images/new.html.erb within layouts/application (20.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:12:59 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:12:59 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:12:59 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:00 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:00 -0600
+
+
+Started POST "/idea_images" for 127.0.0.1 at 2013-12-08 22:13:04 -0600
+Processing by IdeaImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0dNyxW/agMLtlpSZWIN7Rp/PrKMdsdU0E9jNK7WzNSM=", "image"=>#<ActionDispatch::Http::UploadedFile:0x39340f8 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-thhylm>, @original_filename="Ben-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Ben-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "idea_id"=>"6", "commit"=>"Create Idea Image"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "idea_images" ("idea_id", "image") VALUES (?, ?)[0m  [["idea_id", 6], ["image", "Ben-2.jpg"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/idea_images
+Completed 302 Found in 124ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:13:05 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[36mIdeaImage Load (1.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images"[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (22.0ms)
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:13:05 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:05 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:05 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:05 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:05 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2013-12-08 22:13:09 -0600
+Processing by IdeasController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 6]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered ideas/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/ideas/6" for 127.0.0.1 at 2013-12-08 22:13:10 -0600
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "bids" WHERE "bids"."idea_id" = ?  [["idea_id", 6]]
+  [1m[36mIdeaImage Load (0.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."idea_id" = 6[0m
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36mBid Load (0.0ms)[0m  [1mSELECT "bids".* FROM "bids" WHERE "bids"."idea_id" = ?[0m  [["idea_id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 2
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIdea Load (2.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."artist_id" = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "ideas" WHERE "ideas"."artist_id" = 1[0m
+  Rendered ideas/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 43ms (Views: 33.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:13:14 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[35mIdeaImage Load (0.0ms)[0m  SELECT "idea_images".* FROM "idea_images"
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (20.0ms)
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/buyers/sign_out" for 127.0.0.1 at 2013-12-08 22:13:18 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0dNyxW/agMLtlpSZWIN7Rp/PrKMdsdU0E9jNK7WzNSM="}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 1 ORDER BY "buyers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:13:18 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:13:18 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:18 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:18 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:18 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:18 -0600
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:13:20 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[35mIdeaImage Load (1.0ms)[0m  SELECT "idea_images".* FROM "idea_images"
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/idea_images/5" for 127.0.0.1 at 2013-12-08 22:13:23 -0600
+Processing by IdeaImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YjqRJHlcryNe+en/t/9SWZoPwYmtdbyxDwot8kuIz8w=", "id"=>"5"}
+  [1m[35mIdeaImage Load (1.0ms)[0m  SELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "idea_images" WHERE "idea_images"."id" = ?  [["id", 5]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/idea_images
+Completed 302 Found in 28ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:13:23 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[35mIdeaImage Load (1.0ms)[0m  SELECT "idea_images".* FROM "idea_images"
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:13:23 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:24 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:24 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:24 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:24 -0600
+
+
+Started DELETE "/idea_images/6" for 127.0.0.1 at 2013-12-08 22:13:26 -0600
+Processing by IdeaImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YjqRJHlcryNe+en/t/9SWZoPwYmtdbyxDwot8kuIz8w=", "id"=>"6"}
+  [1m[36mIdeaImage Load (0.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "idea_images" WHERE "idea_images"."id" = ?[0m  [["id", 6]]
+  [1m[35m (9.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/idea_images
+Completed 302 Found in 23ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:13:26 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[36mIdeaImage Load (0.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images"[0m
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered idea_images/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:13:26 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:26 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:26 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:26 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:26 -0600
+
+
+Started DELETE "/idea_images/7" for 127.0.0.1 at 2013-12-08 22:13:29 -0600
+Processing by IdeaImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YjqRJHlcryNe+en/t/9SWZoPwYmtdbyxDwot8kuIz8w=", "id"=>"7"}
+  [1m[36mIdeaImage Load (0.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images" WHERE "idea_images"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "idea_images" WHERE "idea_images"."id" = ?[0m  [["id", 7]]
+  [1m[35m (10.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/idea_images
+Completed 302 Found in 42ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:13:29 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[36mIdeaImage Load (1.0ms)[0m  [1mSELECT "idea_images".* FROM "idea_images"[0m
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered idea_images/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 49ms (Views: 44.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:13:29 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:29 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:29 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:29 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:13:30 -0600
+
+
+Started GET "/idea_images" for 127.0.0.1 at 2013-12-08 22:16:22 -0600
+Processing by IdeaImagesController#index as HTML
+  [1m[35mIdeaImage Load (1.0ms)[0m  SELECT "idea_images".* FROM "idea_images"
+  [1m[36mIdea Load (1.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (1.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mIdea Load (0.0ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? ORDER BY "ideas"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered idea_images/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 67ms (Views: 53.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:16:23 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:16:23 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:16:23 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:16:23 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:16:23 -0600
+
+
+Started GET "/portfolio_images" for 127.0.0.1 at 2013-12-08 22:16:28 -0600
+Processing by PortfolioImagesController#index as HTML
+  [1m[36mPortfolioImage Load (0.0ms)[0m  [1mSELECT "portfolio_images".* FROM "portfolio_images"[0m
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered portfolio_images/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 52ms (Views: 40.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/portfolio_images/1/edit" for 127.0.0.1 at 2013-12-08 22:16:30 -0600
+Processing by PortfolioImagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPortfolioImage Load (0.0ms)[0m  SELECT "portfolio_images".* FROM "portfolio_images" WHERE "portfolio_images"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :artist_must_be_owner_of_portfolio_image rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:16:30 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolio_images/1/Workflow.png" for 127.0.0.1 at 2013-12-08 22:16:30 -0600
+
+ActionController::RoutingError (No route matches [GET] "/portfolio_images/1/Workflow.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (114.0ms)
+
+
+Started DELETE "/portfolio_images/1" for 127.0.0.1 at 2013-12-08 22:16:34 -0600
+Processing by PortfolioImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YjqRJHlcryNe+en/t/9SWZoPwYmtdbyxDwot8kuIz8w=", "id"=>"1"}
+  [1m[35mPortfolioImage Load (1.0ms)[0m  SELECT "portfolio_images".* FROM "portfolio_images" WHERE "portfolio_images"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mArtist Load (1.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :artist_must_be_owner_of_portfolio_image rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:16:34 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:16:34 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:16:34 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:16:34 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:16:34 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:16:34 -0600
+
+
+Started GET "/artists" for 127.0.0.1 at 2013-12-08 22:16:36 -0600
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (2.0ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/portfolio_images" for 127.0.0.1 at 2013-12-08 22:16:37 -0600
+Processing by PortfolioImagesController#index as HTML
+  [1m[36mPortfolioImage Load (0.0ms)[0m  [1mSELECT "portfolio_images".* FROM "portfolio_images"[0m
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered portfolio_images/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolio_images/1" for 127.0.0.1 at 2013-12-08 22:16:39 -0600
+Processing by PortfolioImagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPortfolioImage Load (1.0ms)[0m  SELECT "portfolio_images".* FROM "portfolio_images" WHERE "portfolio_images"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPortfolioImage Load (0.0ms)[0m  [1mSELECT "portfolio_images".* FROM "portfolio_images" WHERE "portfolio_images"."id" = 1 LIMIT 1[0m
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered portfolio_images/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/portfolio_images" for 127.0.0.1 at 2013-12-08 22:16:40 -0600
+Processing by PortfolioImagesController#index as HTML
+  [1m[36mPortfolioImage Load (0.0ms)[0m  [1mSELECT "portfolio_images".* FROM "portfolio_images"[0m
+  [1m[35mArtist Load (1.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.0ms)[0m  SELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (0.0ms)[0m  [1mSELECT "artists".* FROM "artists" WHERE "artists"."id" = ? ORDER BY "artists"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered portfolio_images/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/portfolio_images/new" for 127.0.0.1 at 2013-12-08 22:16:42 -0600
+Processing by PortfolioImagesController#new as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `artist' for nil:NilClass):
+  app/controllers/portfolio_images_controller.rb:11:in `artist_must_be_owner_of_portfolio_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/portfolio_images/new" for 127.0.0.1 at 2013-12-08 22:16:43 -0600
+Processing by PortfolioImagesController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `artist' for nil:NilClass):
+  app/controllers/portfolio_images_controller.rb:11:in `artist_must_be_owner_of_portfolio_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.0ms)
+
+
+Started GET "/portfolio_images/new" for 127.0.0.1 at 2013-12-08 22:17:14 -0600
+Processing by PortfolioImagesController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `artist' for nil:NilClass):
+  app/controllers/portfolio_images_controller.rb:11:in `artist_must_be_owner_of_portfolio_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.0ms)
+
+
+Started GET "/portfolio_images/new" for 127.0.0.1 at 2013-12-08 22:17:14 -0600
+Processing by PortfolioImagesController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `artist' for nil:NilClass):
+  app/controllers/portfolio_images_controller.rb:11:in `artist_must_be_owner_of_portfolio_image'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.0ms)
+
+
+Started GET "/portfolio_images/new" for 127.0.0.1 at 2013-12-08 22:17:55 -0600
+Processing by PortfolioImagesController#new as HTML
+  Rendered portfolio_images/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolio_images" for 127.0.0.1 at 2013-12-08 22:18:01 -0600
+Processing by PortfolioImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YjqRJHlcryNe+en/t/9SWZoPwYmtdbyxDwot8kuIz8w=", "image"=>#<ActionDispatch::Http::UploadedFile:0x5353518 @tempfile=#<File:C:/Users/MORALE~1/AppData/Local/Temp/RackMultipart20131208-8808-dlray5>, @original_filename="Ben-2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"Ben-2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "commit"=>"Create Portfolio Image"}
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/portfolio_images_controller.rb:31:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.0ms)
+
+
+Started GET "/portfolio_images/new" for 127.0.0.1 at 2013-12-08 22:20:53 -0600
+Processing by PortfolioImagesController#new as HTML
+  Rendered portfolio_images/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:20:54 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:20:54 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:20:54 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:20:54 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:20:54 -0600
+
+
+Started GET "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:20:55 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/buyers/sign_in" for 127.0.0.1 at 2013-12-08 22:21:01 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YjqRJHlcryNe+en/t/9SWZoPwYmtdbyxDwot8kuIz8w=", "buyer"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."email" = 'b@b.com' ORDER BY "buyers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE "buyers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ? WHERE "buyers"."id" = 2  [["last_sign_in_at", Mon, 09 Dec 2013 02:08:31 UTC +00:00], ["current_sign_in_at", Mon, 09 Dec 2013 04:21:01 UTC +00:00], ["sign_in_count", 6]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 111ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-08 22:21:01 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = 2 ORDER BY "buyers"."id" ASC LIMIT 1
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-08 22:21:02 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-08 22:21:02 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-08 22:21:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-08 22:21:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-08 22:21:02 -0600

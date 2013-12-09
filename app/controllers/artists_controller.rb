@@ -1,9 +1,16 @@
 class ArtistsController < ApplicationController
 
   before_action :set_artist, :only => [:show, :edit, :update, :destroy]
+  before_action :authorize_artist, :only => [:edit, :update, :destroy]
 
   def set_artist
     @artist = Artist.find(params[:id])
+  end
+
+  def authorize_artist
+    unless @artist == current_artist
+      redirect_to root_url, :alert => "You are not authorized for that."
+    end
   end
 
   def index
