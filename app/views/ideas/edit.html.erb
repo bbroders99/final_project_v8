@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Editing Idea #<%= @idea.id %></h1>
+  <h1>Editing "<%= @idea.title %>" Idea</h1>
 </div>
 
 <%= form_tag(idea_url(@idea), method: 'patch', class: 'form-horizontal') do %>
@@ -55,7 +55,7 @@
   <div class="form-group">
     <%= label_tag :rating, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= number_field_tag :rating, nil, :in => 1..10, class: 'form-control' %>
+      <%= select_tag :rating, options_for_select([ nil, 1,2,3,4,5 ], @idea.rating ), class: 'form-control' %>
     </div>
   </div>
 
@@ -71,9 +71,10 @@
   <div class="form-group">
     <%= label_tag :artist_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= select_tag :artist_id, options_from_collection_for_select(Artist.all, :id, :first_name), class: 'form-control' %>
+      <%= select_tag :artist_id, options_from_collection_for_select(Artist.all, :id, :full_name), class: 'form-control' %>
     </div>
   </div>
+
 
 
   <div class="form-group">

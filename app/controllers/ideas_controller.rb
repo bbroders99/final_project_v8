@@ -10,7 +10,9 @@ class IdeasController < ApplicationController
     if buyer_signed_in?
       @ideas = current_buyer.ideas
     elsif artist_signed_in?
-      @ideas = Idea.all
+      open_projects = Idea.where(:artist_id => nil)
+      @ideas = current_artist.ideas + open_projects
+
     else 
       @ideas = Idea.all
     end
