@@ -7,6 +7,13 @@ class Idea < ActiveRecord::Base
 	has_many :bids
 
 	validates :buyer_id, :presence => true
+	validates :post_date, :presence => true
+	validates :title, :presence => true
+	validates :description, :presence => true
+	validates :price, :presence => true
+	validates :category, :presence => true
+	validates :size, :presence => true
+
 	
 	def artist
 		return Artist.find(artist_id)

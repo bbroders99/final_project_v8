@@ -44,14 +44,11 @@
       <%= text_field_tag :size, nil, class: 'form-control' %>
     </div>
   </div>
-<!--
+
   <div class="form-group">
-    <%= label_tag :status, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-      <%= select_tag :status, options_for_select([ "Open", "Done" ], "Open"), class: 'form-control' %>
-    </div>
+      <%= hidden_field_tag :status, "Open", class: 'form-control' %>
   </div>
--->
+
 <!--
   <div class="form-group">
     <%= label_tag :rating, nil, class: 'col-md-2 control-label' %>
@@ -68,6 +65,9 @@
     </div>
   </div>
 -->
+  <div class="col-md-offset-2 col-md-6">
+    <p>You can add images at a later stage </p>
+  </div>
 
   <div class="form-group">
     <div class="col-md-offset-2 col-md-6">
