@@ -36,8 +36,19 @@
       <%= @idea.artist.first_name %> <%= @idea.artist.last_name %>
     <% end %>
   </dd>
+
   <dt># of bids</dt>
   <dd> <%= @idea.bids.count %>
+
+  <dt>Images</dt>
+  <dd>
+     <% a = @idea.id %>
+     <% b = IdeaImage.where(:idea_id => a) %>
+     
+     <% b.each do |b| %>
+        <%= image_tag b.image, :width => 200 %>
+     <% end %>
+  </dd>
 
 </dl>
 
