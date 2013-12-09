@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>Portfolio Image #<%= @portfolio_image.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Image</dt>
+  <dd><%= @portfolio_image.image %></dd>
+
+  <dt>Artist</dt>
+  <dd><%= @portfolio_image.artist.full_name %></dd>
+
+  <dt>Image</dt>
+  <dd><%= image_tag @portfolio_image.image, :width => 100 %></dd>
+
+  <% @portfolio_images.each do |portfolio_image| %>
+      <tr>
+        <td><%= image_tag portfolio_image.image, :width => 100 %></td>
+        <td><%= portfolio_image.artist.full_name %></td>
+        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, portfolio_image_url(portfolio_image), class: 'btn btn-primary' %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_portfolio_image_url(portfolio_image), class: 'btn btn-warning' %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, portfolio_image_url(portfolio_image), method: 'delete', data: { confirm: "Do you really want to delete this portfolio_image?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+
+</dl>
