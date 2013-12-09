@@ -1,11 +1,17 @@
 class ArtistsController < ApplicationController
 
+  before_action :set_artist, :only => [:show, :edit, :update, :destroy]
+
+  def set_artist
+    @artist = Artist.find(params[:id])
+  end
+
   def index
     @artists = Artist.all
   end
 
   def show
-    @artist = Artist.find_by(id: params[:id])
+  
   end
 
   def new
@@ -26,11 +32,10 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-    @artist = Artist.find_by(id: params[:id])
+
   end
 
   def update
-    @artist = Artist.find_by(id: params[:id])
     @artist.first_name = params[:first_name]
     @artist.last_name = params[:last_name]
     @artist.email = current_artist.email
@@ -44,7 +49,7 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
-    @artist = Artist.find_by(id: params[:id])
+  
     @artist.destroy
 
     redirect_to artists_url, notice: "Artist deleted."

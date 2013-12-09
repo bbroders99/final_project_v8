@@ -46,7 +46,7 @@
         <li><%= link_to("Idea Images", "/idea_images") %></li>
         <li><%= link_to("Portfolio Images", "/portfolio_images") %></li>
         <% if buyer_signed_in? %>
-          <li><%= link_to current_buyer.email, edit_buyer_registration_path %></li>
+          <li><%= link_to current_buyer.full_name + " acct", edit_buyer_registration_path %></li>
           <li><%= link_to "Logout Buyer" , destroy_buyer_session_path, method: :delete %></li>
         <% elsif artist_signed_in? %> 
           <li><%= link_to current_artist.email, edit_artist_registration_path %></li>

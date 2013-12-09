@@ -1,11 +1,17 @@
 class BidsController < ApplicationController
 
+  before_action :set_bid, :only => [:show, :edit, :update, :destroy]
+
+  def set_bid
+    @bid = Bid.find(params[:id])
+  end
+
+
   def index
     @bids = Bid.all
   end
 
   def show
-    @bid = Bid.find_by(id: params[:id])
   end
 
   def new
@@ -24,11 +30,9 @@ class BidsController < ApplicationController
   end
 
   def edit
-    @bid = Bid.find_by(id: params[:id])
   end
 
   def update
-    @bid = Bid.find_by(id: params[:id])
     @bid.idea_id = params[:idea_id]
     @bid.artist_id = current_artist.id
 
@@ -40,7 +44,7 @@ class BidsController < ApplicationController
   end
 
   def destroy
-    @bid = Bid.find_by(id: params[:id])
+
     @bid.destroy
 
     redirect_to bids_url, notice: "Bid deleted."

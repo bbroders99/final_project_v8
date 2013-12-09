@@ -1,11 +1,17 @@
 class BuyersController < ApplicationController
 
+  before_action :set_buyer, :only => [:show, :edit, :update, :destroy]
+
+  def set_buyer
+    @buyer = Buyer.find(params[:id])
+  end
+
   def index
     @buyers = Buyer.all
   end
 
   def show
-    @buyer = Buyer.find_by(id: params[:id])
+
   end
 
   def new
@@ -25,11 +31,10 @@ class BuyersController < ApplicationController
   end
 
   def edit
-    @buyer = Buyer.find_by(id: params[:id])
+
   end
 
   def update
-    @buyer = Buyer.find_by(id: params[:id])
     @buyer.first_name = params[:first_name]
     @buyer.last_name = params[:last_name]
     @buyer.email = current_buyer.email
@@ -42,7 +47,7 @@ class BuyersController < ApplicationController
   end
 
   def destroy
-    @buyer = Buyer.find_by(id: params[:id])
+
     @buyer.destroy
 
     redirect_to buyers_url, notice: "Buyer deleted."

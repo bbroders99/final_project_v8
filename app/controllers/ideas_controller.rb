@@ -1,5 +1,11 @@
 class IdeasController < ApplicationController
 
+  before_action :set_idea, :only => [:show, :edit, :update, :destroy]
+
+  def set_idea
+    @idea = Idea.find(params[:id])
+  end
+
   def index
     if buyer_signed_in?
       @ideas = current_buyer.ideas
@@ -14,7 +20,6 @@ class IdeasController < ApplicationController
   end
 
   def show
-    @idea = Idea.find_by(id: params[:id])
   end
 
   def new
@@ -41,11 +46,9 @@ class IdeasController < ApplicationController
   end
 
   def edit
-    @idea = Idea.find_by(id: params[:id])
   end
 
   def update
-    @idea = Idea.find_by(id: params[:id])
     @idea.post_date = params[:post_date]
     @idea.title = params[:title]
     @idea.description = params[:description]
@@ -65,7 +68,6 @@ class IdeasController < ApplicationController
   end
 
   def destroy
-    @idea = Idea.find_by(id: params[:id])
     @idea.destroy
 
     redirect_to ideas_url, notice: "Idea deleted."

@@ -1,5 +1,12 @@
 class PortfolioImagesController < ApplicationController
 
+  before_action :set_portfolio_image, :only => [:show, :edit, :update, :destroy]
+
+  def set_portfolio_image
+    @portfolio_image = PortfolioImage.find(params[:id])
+  end
+
+
   def index
     @portfolio_images = PortfolioImage.all
   end

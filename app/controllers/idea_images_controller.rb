@@ -1,12 +1,17 @@
 class IdeaImagesController < ApplicationController
 
+  before_action :set_idea_image, :only => [:show, :edit, :update, :destroy]
+
+  def set_idea_image
+    @idea_image = IdeaImage.find(params[:id])
+  end
+
 
   def index
     @idea_images = IdeaImage.all
   end
 
   def show
-    @idea_image = IdeaImage.find_by(id: params[:id])
   end
 
   def new
@@ -25,11 +30,9 @@ class IdeaImagesController < ApplicationController
   end
 
   def edit
-    @idea_image = IdeaImage.find_by(id: params[:id])
   end
 
   def update
-    @idea_image = IdeaImage.find_by(id: params[:id])
     @idea_image.image = params[:image]
     @idea_image.idea_id = params[:idea_id]
 
@@ -41,7 +44,6 @@ class IdeaImagesController < ApplicationController
   end
 
   def destroy
-    @idea_image = IdeaImage.find_by(id: params[:id])
     @idea_image.destroy
 
     redirect_to idea_images_url, notice: "Idea image deleted."
