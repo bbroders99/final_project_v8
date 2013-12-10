@@ -1,5 +1,35 @@
 == README
 
+There are two types of users: Buyers and Artists
+
+Buyer login email: 	b@b.com
+Buyer password:		buyer999
+
+Artist login email:	y@y.com
+Artist password:	artist99
+
+Alternative users are:
+	
+	Buyer login email: 	a@a.com
+	Buyer password:		buyer999
+
+	Buyer login email: 	c@c.com
+	Buyer password:		buyer999
+
+	Artist login email:	v@v.com
+	Artist password:	artist99
+
+	Artist login email:	z@z.com
+	Artist password:	artist99
+
+
+Some of the more challenging features included are:
+1. Customized views for Buyers and Artists
+2. Multiple image uploads possible per Idea or Artist Portfolio
+3. Artist ratings are averaged together to create an aggregated rating
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
