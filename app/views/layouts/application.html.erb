@@ -44,9 +44,11 @@
           <li><%= link_to("Buyers", "/buyers") %></li>
           <li><%= link_to("Artists", "/artists") %></li>
           <li><%= link_to("Bids", "/bids") %></li>
+          <li><%= link_to("Idea Images", "/idea_images") %></li>
         <% end %>
-        <li><%= link_to("Idea Images", "/idea_images") %></li>
-        <li><%= link_to("Portfolio Images", "/portfolio_images") %></li>
+        <% if buyer_signed_in? == false %>
+          <li><%= link_to("Portfolio Images", "/portfolio_images") %></li>
+        <% end %>
       </ul>
        
       <ul class="nav navbar-nav navbar-right">
