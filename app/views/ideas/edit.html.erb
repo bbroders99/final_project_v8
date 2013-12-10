@@ -45,19 +45,26 @@
     </div>
   </div>
 
+  <%= hidden_field_tag :status, @idea.status, class: 'form-control' %>
+  <%= hidden_field_tag :rating, @idea.rating, class: 'form-control' %>
+  <%= hidden_field_tag :artist_id, @idea.artist_id, class: 'form-control' %>
+
+<!--
   <div class="form-group">
     <%= label_tag :status, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
       <%= select_tag :status, options_for_select([ "Open", "Done" ], @idea.status), class: 'form-control' %>
     </div>
   </div>
-
+-->
+<!--
   <div class="form-group">
     <%= label_tag :rating, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
       <%= select_tag :rating, options_for_select([ nil, 1,2,3,4,5 ], @idea.rating ), class: 'form-control' %>
     </div>
   </div>
+-->
 
 <!--
   <div class="form-group">
@@ -67,15 +74,14 @@
     </div>
   </div>
 -->
-
+<!--
   <div class="form-group">
     <%= label_tag :artist_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
     <%= select_tag :artist_id, options_from_collection_for_select(Artist.all, :id, :full_name, @idea.artist_id), class: 'form-control' %>
-
     </div>
   </div>
-
+-->
   <div class="form-group">
     <div class="col-md-offset-2 col-md-6">
       <%= submit_tag "Update Idea", class: 'btn btn-primary' %>

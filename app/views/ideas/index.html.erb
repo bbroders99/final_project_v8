@@ -29,7 +29,6 @@
       <!-- <% end %> -->
       <th>Show</th>
       <% if artist_signed_in? == false %>
-        <th>Edit</th>
         <th>Delete</th>
       <% end %>
     </tr>
@@ -58,7 +57,6 @@
           <!-- <% end %> -->
           <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, idea_url(idea), class: 'btn btn-primary' %></td>
           <% if artist_signed_in? == false %>
-            <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_idea_url(idea), class: 'btn btn-warning' %></td>
             <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, idea_url(idea), method: 'delete', data: { confirm: "Do you really want to delete this idea?" }, class: 'btn btn-danger' %></td>
           <% end %>
         </tr>
@@ -94,7 +92,6 @@
       <!-- <% end %> -->
       <th>Show</th>
       <% if artist_signed_in? == false %>
-        <th>Edit</th>
         <th>Delete</th>
       <% end %>
     </tr>
@@ -123,7 +120,6 @@
           <!-- <% end %> -->
           <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, idea_url(idea), class: 'btn btn-primary' %></td>
           <% if artist_signed_in? == false %>
-            <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_idea_url(idea), class: 'btn btn-warning' %></td>
             <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, idea_url(idea), method: 'delete', data: { confirm: "Do you really want to delete this idea?" }, class: 'btn btn-danger' %></td>
           <% end %>
         </tr>

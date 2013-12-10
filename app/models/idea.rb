@@ -4,7 +4,7 @@ class Idea < ActiveRecord::Base
 	belongs_to :artist
 
 	has_many :idea_images, :dependent => :destroy
-	has_many :bids
+	has_many :bids, :dependent => :destroy
 
 	validates :buyer_id, :presence => true
 	validates :post_date, :presence => true
@@ -22,7 +22,5 @@ class Idea < ActiveRecord::Base
 	def buyer
 		return Buyer.find(buyer_id)
 	end
-
-
 
 end

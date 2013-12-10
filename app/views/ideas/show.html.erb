@@ -2,12 +2,18 @@
   <h1><%= @idea.title %></h1>
   <p class="text-info">Status - <%= @idea.status %></p>
 
+  <!-- edit idea -->
+
+  <% if buyer_signed_in? && @idea.status == "Open" %>
+    <%= link_to 'Edit idea', edit_idea_url(@idea), class: 'btn btn-primary' %>
+  <% end %>
+
 <!-- New Bid Form -->
 
   <% if artist_signed_in? && @idea.status == "Open" %>
 
     <% if @idea.bids.find_by(:artist_id => current_artist.id) == nil %>
-    
+
       <%= form_tag(bids_url, method: 'post', class: 'form-horizontal') do %>
         <div class="form-group">
           <%= hidden_field_tag :idea_id, @idea.id, class: 'form-control' %>
@@ -24,6 +30,7 @@
     <% end %>
   <% end %>
 </div>
+
 
 <!-- Idea description -->
 

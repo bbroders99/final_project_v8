@@ -32,7 +32,7 @@ class ArtistsController < ApplicationController
     @artist.bio = params[:bio]
 
     if @artist.save
-      redirect_to artists_url, notice: "Artist created successfully."
+      redirect_to ideas_url, notice: "Artist created successfully."
     else
       render 'new'
     end
@@ -49,7 +49,7 @@ class ArtistsController < ApplicationController
     @artist.bio = params[:bio]
 
     if @artist.save
-      redirect_to artists_url, notice: "Artist updated successfully."
+      redirect_to ideas_url, notice: "Artist updated successfully."
     else
       render 'edit'
     end
@@ -59,6 +59,6 @@ class ArtistsController < ApplicationController
   
     @artist.destroy
 
-    redirect_to artists_url, notice: "Artist deleted."
+    redirect_to root_url, notice: "Artist deleted."
   end
 end

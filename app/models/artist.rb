@@ -6,10 +6,10 @@ class Artist < ActiveRecord::Base
 
 	has_many :ideas
 	has_many :portfolio_images, :dependent => :destroy
-	has_many :bids
+	has_many :bids, :dependent => :destroy
 
-	#validates :first_name, :presence => true
-	#validates :last_name, :presence => true
+	validates :first_name, :presence => true
+	validates :last_name, :presence => true
 	#validates :bio, :presence => true
 
 	def full_name

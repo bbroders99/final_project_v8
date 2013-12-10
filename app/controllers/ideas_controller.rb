@@ -12,7 +12,6 @@ class IdeasController < ApplicationController
     elsif artist_signed_in?
       open_projects = Idea.where(:artist_id => nil)
       @ideas = current_artist.ideas + open_projects
-
     else 
       @ideas = Idea.all
     end

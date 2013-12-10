@@ -32,7 +32,7 @@ class BuyersController < ApplicationController
     @buyer.email = params[:email]
 
     if @buyer.save
-      redirect_to buyers_url, notice: "Buyer created successfully."
+      redirect_to ideas_url, notice: "Buyer created successfully."
     else
       render 'new'
     end
@@ -48,7 +48,7 @@ class BuyersController < ApplicationController
     @buyer.email = current_buyer.email
 
     if @buyer.save
-      redirect_to buyers_url, notice: "Buyer updated successfully."
+      redirect_to ideas_url, notice: "Buyer updated successfully."
     else
       render 'edit'
     end
@@ -58,6 +58,6 @@ class BuyersController < ApplicationController
 
     @buyer.destroy
 
-    redirect_to buyers_url, notice: "Buyer deleted."
+    redirect_to root_url, notice: "Buyer deleted."
   end
 end
