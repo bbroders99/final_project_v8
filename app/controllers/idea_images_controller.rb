@@ -22,9 +22,10 @@ class IdeaImagesController < ApplicationController
     @idea_image.idea_id = params[:idea_id]
 
     if @idea_image.save
-      redirect_to idea_images_url, notice: "Idea image created successfully."
+      redirect_to ideas_url, notice: "Idea image created successfully."
     else
-      render 'new'
+      #render 'new'
+      redirect_to ideas_url, alert: "Must select image."
     end
   end
 
@@ -36,15 +37,16 @@ class IdeaImagesController < ApplicationController
     @idea_image.idea_id = params[:idea_id]
 
     if @idea_image.save
-      redirect_to idea_images_url, notice: "Idea image updated successfully."
+      redirect_to ideas_url, notice: "Idea image updated successfully."
     else
-      render 'edit'
+      #render 'edit'
+      redirect_to ideas_url, alert: "Must select image."
     end
   end
 
   def destroy
     @idea_image.destroy
 
-    redirect_to idea_images_url, notice: "Idea image deleted."
+    redirect_to ideas_url, notice: "Idea image deleted."
   end
 end

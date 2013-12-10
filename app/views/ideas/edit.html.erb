@@ -76,11 +76,57 @@
     </div>
   </div>
 
-
-
   <div class="form-group">
     <div class="col-md-offset-2 col-md-6">
       <%= submit_tag "Update Idea", class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>
+
+
+<!-- Add images for idea -->
+
+<div class="page-header">
+  <h3>Add Image to "<%= @idea.title %>" idea</h3>
+</div>
+
+<%= form_tag(idea_images_url, method: 'post', class: 'form-horizontal', multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag :image, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= file_field_tag :image %>
+    </div>
+  </div>
+
+  <%= hidden_field_tag :idea_id, @idea.id, class: 'form-control' %>
+
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-6">
+      <%= submit_tag "Add image", class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
+
+<!-- Show images for idea -->
+
+<div class="page-header">
+  <h3>Current Images for "<%= @idea.title %>" idea</h3>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @idea.idea_images.each do |idea_image| %>
+      <tr>
+        <td><%= image_tag idea_image.image, :height => 50 %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, idea_image_url(idea_image), method: 'delete', data: { confirm: "Do you really want to delete this idea_image?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

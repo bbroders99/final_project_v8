@@ -17,8 +17,7 @@ class IdeasController < ApplicationController
       @ideas = Idea.all
     end
 
-    # @ideas = Idea.all
-    
+   
   end
 
   def show
