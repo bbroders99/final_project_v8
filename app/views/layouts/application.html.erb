@@ -45,8 +45,6 @@
           <li><%= link_to("Artists", "/artists") %></li>
           <li><%= link_to("Bids", "/bids") %></li>
           <li><%= link_to("Idea Images", "/idea_images") %></li>
-        <% end %>
-        <% if buyer_signed_in? == false %>
           <li><%= link_to("Portfolio Images", "/portfolio_images") %></li>
         <% end %>
       </ul>

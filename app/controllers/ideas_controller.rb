@@ -40,7 +40,7 @@ class IdeasController < ApplicationController
     @idea.artist_id = params[:artist_id]
 
     if @idea.save
-      redirect_to ideas_url, notice: "Idea created successfully."
+      redirect_to edit_idea_url(@idea), notice: "Idea created successfully."
     else
       render 'new'
     end

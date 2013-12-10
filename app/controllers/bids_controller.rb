@@ -23,7 +23,7 @@ class BidsController < ApplicationController
     @bid.artist_id = current_artist.id
 
     if @bid.save
-      redirect_to bids_url, notice: "Bid created successfully."
+      redirect_to ideas_url, notice: "Bid created successfully."
     else
       render 'new'
     end
@@ -37,7 +37,7 @@ class BidsController < ApplicationController
     @bid.artist_id = current_artist.id
 
     if @bid.save
-      redirect_to bids_url, notice: "Bid updated successfully."
+      redirect_to ideas_url, notice: "Bid updated successfully."
     else
       render 'edit'
     end
@@ -47,6 +47,6 @@ class BidsController < ApplicationController
 
     @bid.destroy
 
-    redirect_to bids_url, notice: "Bid deleted."
+    redirect_to ideas_url, notice: "Bid deleted."
   end
 end
