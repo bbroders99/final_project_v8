@@ -45,3 +45,54 @@
        or <%= link_to "Manage Your Account", edit_artist_registration_path, class: 'btn btn-warning' %>
      </div>
   </div>
+
+
+
+<!-- Add images for portfolio -->
+
+<div class="page-header">
+  <h3>Add Portfolio Image</h3>
+</div>
+
+<%= form_tag(portfolio_images_url, method: 'post', class: 'form-horizontal', multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag :image, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= file_field_tag :image %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-6">
+      <%= submit_tag "Add Portfolio Image", class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
+
+<!-- Show images for portfolio -->
+
+
+<div class="page-header">
+  <h3>Portfolio images</h3>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Delete</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artist.portfolio_images.each do |portfolio_image| %>
+      <tr>
+        <td><%= image_tag portfolio_image.image, :height => 50 %></td>
+        <!--<td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, portfolio_image_url(portfolio_image), class: 'btn btn-primary' %></td>-->
+        <!--<td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_portfolio_image_url(portfolio_image), class: 'btn btn-warning' %></td>-->
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, portfolio_image_url(portfolio_image), method: 'delete', data: { confirm: "Do you really want to delete this portfolio_image?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -71,7 +71,7 @@
   <div class="form-group">
     <%= label_tag :artist_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-    <%= select_tag :artist_id, options_from_collection_for_select(Artist.all, :id, :full_name), class: 'form-control' %>
+    <%= select_tag :artist_id, options_from_collection_for_select(Artist.all, :id, :full_name, @idea.artist_id), class: 'form-control' %>
 
     </div>
   </div>

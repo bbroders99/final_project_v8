@@ -31,9 +31,10 @@ class PortfolioImagesController < ApplicationController
     @portfolio_image.artist_id = current_artist.id
 
     if @portfolio_image.save
-      redirect_to portfolio_images_url, notice: "Portfolio image created successfully."
+      redirect_to artist_url(current_artist.id), notice: "Portfolio image created successfully"
     else
-      render 'new'
+      #render 'new'
+      redirect_to edit_artist_url(current_artist.id), alert: "Must select image."
     end
   end
 
@@ -47,9 +48,10 @@ class PortfolioImagesController < ApplicationController
     @portfolio_image.artist_id = current_artist.id
 
     if @portfolio_image.save
-      redirect_to portfolio_images_url, notice: "Portfolio image updated successfully."
+      redirect_to artist_url(current_artist.id), notice: "Portfolio image created successfully"
     else
-      render 'edit'
+      #render 'edit'
+      redirect_to edit_artist_url(current_artist.id), alert: "Must select image."
     end
   end
 
@@ -57,6 +59,6 @@ class PortfolioImagesController < ApplicationController
     @portfolio_image = PortfolioImage.find_by(id: params[:id])
     @portfolio_image.destroy
 
-    redirect_to portfolio_images_url, notice: "Portfolio image deleted."
+    redirect_to artist_url(current_artist.id), notice: "Portfolio image deleted."
   end
 end

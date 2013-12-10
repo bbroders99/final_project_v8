@@ -66,6 +66,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_artist.full_name %> : Artist <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><%= link_to "Account", edit_artist_url(current_artist.id) %></li>
+              <li><%= link_to "View portfolio", artist_url(current_artist.id) %></li>
               <li class="divider"></li>
               <li><%= link_to "Logout " + current_artist.full_name, destroy_artist_session_path, method: :delete %></li>
             </ul>
